@@ -1,0 +1,8 @@
+{
+  "min_supported_app_version_code": 1,
+  "latest_app_version_code": 1,
+  "maintenance": false,
+  "features": {"contributions": true, "public_score": false, "sponsored": false, "off_lookup": false, "google_sign_in": false},
+  "legal": {"privacy_version": "2026-11-01", "terms_version": "2026-11-01", "methodology_version": "pending"},
+  "supported_locales": ["en", "hi"]
+}

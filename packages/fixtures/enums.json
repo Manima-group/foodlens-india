@@ -1,0 +1,105 @@
+{
+  "analysis_status": [
+    "scored",
+    "insufficient_data",
+    "methodology_pending",
+    "unverified_provisional",
+    "not_applicable"
+  ],
+  "evidence_level": [
+    "label_declared",
+    "community_submitted",
+    "manufacturer_submitted",
+    "reviewer_verified",
+    "laboratory_tested"
+  ],
+  "review_state": [
+    "draft",
+    "submitted",
+    "needs_changes",
+    "approved",
+    "rejected",
+    "archived"
+  ],
+  "contribution_state": [
+    "draft",
+    "photos_uploaded",
+    "extracting",
+    "awaiting_confirmation",
+    "submitted",
+    "in_review",
+    "accepted",
+    "rejected",
+    "spam"
+  ],
+  "claim_state": [
+    "pending",
+    "evidence_requested",
+    "verified",
+    "disputed",
+    "rejected",
+    "revoked"
+  ],
+  "org_verification": [
+    "unverified",
+    "pending",
+    "verified",
+    "suspended"
+  ],
+  "lab_report_status": [
+    "received",
+    "under_review",
+    "verified",
+    "rejected",
+    "expired"
+  ],
+  "payment_state": [
+    "created",
+    "attempted",
+    "paid",
+    "failed",
+    "refunded",
+    "partially_refunded"
+  ],
+  "subscription_state": [
+    "trialing",
+    "active",
+    "past_due",
+    "grace",
+    "cancelled",
+    "expired"
+  ],
+  "campaign_state": [
+    "draft",
+    "pending_approval",
+    "approved",
+    "active",
+    "paused",
+    "completed",
+    "rejected"
+  ],
+  "placement_slot": [
+    "product_detail_sponsored",
+    "search_sponsored",
+    "discover_sponsored",
+    "brand_storefront"
+  ],
+  "nutrient_basis": [
+    "per_100g",
+    "per_100ml",
+    "per_serving"
+  ],
+  "data_freshness": [
+    "fresh",
+    "stale",
+    "unknown"
+  ],
+  "symbology": [
+    "EAN_13",
+    "EAN_8",
+    "UPC_A",
+    "UPC_E",
+    "GTIN_14",
+    "MANUAL"
+  ]
+}

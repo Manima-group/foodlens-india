@@ -1,0 +1,38 @@
+{
+  "description": "Shared GTIN normalisation test vectors (SPEC §7). Python (services/api) and Kotlin (:core:gtin) must both pass every case. symbology null = manual entry (no scanner hint).",
+  "version": 1,
+  "cases": [
+    {"id": "ean13_india_valid", "input": "8901234567890", "symbology": "EAN_13", "expected": {"gtin14": "08901234567890", "is_restricted_circulation": false}, "note": "valid, India prefix 890"},
+    {"id": "ean13_bad_check", "input": "8901234567891", "symbology": "EAN_13", "expected_error": "INVALID_CHECK_DIGIT", "note": "bad check digit"},
+    {"id": "ean13_valid_2", "input": "8900000000012", "symbology": "EAN_13", "expected": {"gtin14": "08900000000012", "is_restricted_circulation": false}},
+    {"id": "ean13_valid_de", "input": "4006381333931", "symbology": "EAN_13", "expected": {"gtin14": "04006381333931", "is_restricted_circulation": false}},
+    {"id": "upca_valid", "input": "036000291452", "symbology": "UPC_A", "expected": {"gtin14": "00036000291452", "is_restricted_circulation": false}},
+    {"id": "ean13_equiv_upca", "input": "0036000291452", "symbology": "EAN_13", "expected": {"gtin14": "00036000291452", "is_restricted_circulation": false}, "note": "same GTIN as upca_valid: equivalence, not collision"},
+    {"id": "ean8_valid_1", "input": "96385074", "symbology": "EAN_8", "expected": {"gtin14": "00000096385074", "is_restricted_circulation": false}},
+    {"id": "ean8_valid_2", "input": "12345670", "symbology": "EAN_8", "expected": {"gtin14": "00000012345670", "is_restricted_circulation": false}},
+    {"id": "upce_d6_1", "input": "04252614", "symbology": "UPC_E", "expected": {"gtin14": "00042100005264", "is_restricted_circulation": false}, "note": "expands to 042100005264"},
+    {"id": "upce_d6_5to9", "input": "01234565", "symbology": "UPC_E", "expected": {"gtin14": "00012345000065", "is_restricted_circulation": false}, "note": "expands to 012345000065"},
+    {"id": "upce_d6_4", "input": "00123457", "symbology": "UPC_E", "expected": {"gtin14": "00001234000057", "is_restricted_circulation": false}, "note": "expands to 001234000057"},
+    {"id": "ean13_leading_zeros", "input": "0000001234565", "symbology": "EAN_13", "expected": {"gtin14": "00000001234565", "is_restricted_circulation": false}, "note": "leading zeros preserved"},
+    {"id": "non_digit", "input": "89012345A", "symbology": null, "expected_error": "INVALID_BARCODE", "note": "non-digit"},
+    {"id": "bad_length", "input": "123", "symbology": null, "expected_error": "INVALID_BARCODE", "note": "bad length"},
+
+    {"id": "whitespace_hyphens_stripped", "input": " 890-1234 567890 ", "symbology": null, "expected": {"gtin14": "08901234567890", "is_restricted_circulation": false}, "note": "step 1: strip whitespace/hyphens"},
+    {"id": "manual_ambiguous", "input": "01234565", "symbology": null, "expected_error": "AMBIGUOUS_BARCODE", "expected_candidates": [{"gtin14": "00000001234565", "symbology": "EAN_8"}, {"gtin14": "00012345000065", "symbology": "UPC_E"}], "note": "valid as EAN-8 and as UPC-E: client must choose"},
+    {"id": "manual_upce_only", "input": "04252614", "symbology": null, "expected": {"gtin14": "00042100005264", "is_restricted_circulation": false}, "note": "EAN-8 check fails, UPC-E valid"},
+    {"id": "manual_ean8_only", "input": "96385074", "symbology": null, "expected": {"gtin14": "00000096385074", "is_restricted_circulation": false}, "note": "first digit 9 so UPC-E not attempted"},
+    {"id": "manual_8_neither", "input": "96385075", "symbology": null, "expected_error": "INVALID_CHECK_DIGIT"},
+    {"id": "upce_bad_number_system", "input": "21234565", "symbology": "UPC_E", "expected_error": "INVALID_BARCODE", "note": "UPC-E number system must be 0 or 1"},
+    {"id": "ean8_symbology_bad_check", "input": "04252614", "symbology": "EAN_8", "expected_error": "INVALID_CHECK_DIGIT", "note": "scanner symbology is trusted over guessing"},
+    {"id": "symbology_length_mismatch", "input": "036000291452", "symbology": "EAN_13", "expected_error": "INVALID_BARCODE"},
+    {"id": "gtin14_valid", "input": "10036000291459", "symbology": "GTIN_14", "expected": {"gtin14": "10036000291459", "is_restricted_circulation": false}},
+    {"id": "gtin14_manual_valid", "input": "00036000291452", "symbology": null, "expected": {"gtin14": "00036000291452", "is_restricted_circulation": false}, "note": "normalize is idempotent on canonical form"},
+    {"id": "restricted_20", "input": "2012345678903", "symbology": "EAN_13", "expected": {"gtin14": "02012345678903", "is_restricted_circulation": true}},
+    {"id": "restricted_29", "input": "2900000000124", "symbology": "EAN_13", "expected": {"gtin14": "02900000000124", "is_restricted_circulation": true}},
+    {"id": "restricted_04", "input": "0400000000015", "symbology": "EAN_13", "expected": {"gtin14": "00400000000015", "is_restricted_circulation": true}},
+    {"id": "restricted_02_upca", "input": "212345678909", "symbology": "UPC_A", "expected": {"gtin14": "00212345678909", "is_restricted_circulation": true}, "note": "UPC-A number system 2 = GTIN-13 prefix 02"},
+    {"id": "not_restricted_30", "input": "3000000000007", "symbology": "EAN_13", "expected": {"gtin14": "03000000000007", "is_restricted_circulation": false}},
+    {"id": "empty", "input": "", "symbology": null, "expected_error": "INVALID_BARCODE"},
+    {"id": "length_9", "input": "123456789", "symbology": null, "expected_error": "INVALID_BARCODE"}
+  ]
+}

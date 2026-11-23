@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="manual_entry_title">Enter barcode</string>
+    <string name="manual_entry_label">Barcode number</string>
+    <string name="manual_entry_submit">Look up</string>
+    <string name="manual_entry_ambiguous">This number could be two different barcodes. Which one is printed on the pack?</string>
+    <string name="manual_entry_candidate">%1$s: %2$s</string>
+    <!-- Mapped from API/GTIN error codes, never from messages (SPEC §8.2). -->
+    <string name="error_invalid_barcode">That isn\'t a valid barcode. Use 8, 12, 13 or 14 digits.</string>
+    <string name="error_invalid_check_digit">The last digit doesn\'t match. Please check the number.</string>
+</resources>

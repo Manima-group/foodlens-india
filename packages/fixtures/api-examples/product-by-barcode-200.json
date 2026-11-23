@@ -1,0 +1,26 @@
+{
+  "product": {
+    "id": "0193…",
+    "gtin14": "08901234567890",
+    "original_code": "8901234567890",
+    "name": "Masala Crunch Namkeen (Synthetic)",
+    "brand": {"id": "0193…", "name": "Demo Snacks Co", "is_verified": false},
+    "variant": {"net_quantity": 150, "unit": "g", "pack_format": "pouch"},
+    "category": {"id": "…", "slug": "namkeen-savoury-snacks", "name": "Namkeen & savoury snacks"},
+    "images": [{"kind": "front", "url": "https://…signed…", "licence": "CC-BY-SA-3.0", "attribution": "…"}],
+    "label_version": {"id": "…", "observed_at": "2026-10-02T00:00:00Z", "evidence_level": "reviewer_verified"},
+    "data_freshness": "fresh",
+    "completeness": {"nutrition": true, "ingredients": true, "allergens": true, "missing_fields": []},
+    "badges": ["label_declared_veg"]
+  },
+  "analysis_summary": {
+    "analysis_status": "methodology_pending",
+    "score_value": null,
+    "confidence": null,
+    "rule_version": "nutr-ind-0.1-placeholder",
+    "headline_indicators": [
+      {"nutrient": "sodium", "level": "high", "is_placeholder_threshold": true, "basis": "per_100g"}
+    ]
+  },
+  "sponsored": []
+}

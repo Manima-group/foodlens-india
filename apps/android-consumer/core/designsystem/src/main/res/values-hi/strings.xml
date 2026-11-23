@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hindi drafts: need native-speaker review before release (RISK_REGISTER R2). -->
+    <string name="status_scored">स्कोर किया गया</string>
+    <string name="status_insufficient_data">स्कोर देने के लिए पर्याप्त डेटा नहीं है</string>
+    <string name="status_methodology_pending">अभी कोई स्कोर नहीं: स्कोरिंग पद्धति विशेषज्ञ समीक्षा के लिए लंबित है</string>
+    <string name="status_unverified_provisional">असत्यापित: सामुदायिक डेटा समीक्षा की प्रतीक्षा में है</string>
+    <string name="status_not_applicable">इस उत्पाद पर स्कोर लागू नहीं होता</string>
+
+    <string name="evidence_label_declared">लेबल पर घोषित</string>
+    <string name="evidence_community_submitted">समुदाय द्वारा जमा</string>
+    <string name="evidence_manufacturer_submitted">निर्माता द्वारा जमा</string>
+    <string name="evidence_reviewer_verified">समीक्षक द्वारा सत्यापित</string>
+    <string name="evidence_laboratory_tested">प्रयोगशाला में परीक्षित</string>
+
+    <string name="sponsored_label">प्रायोजित</string>
+    <string name="sponsored_content_description">%1$s: %2$s. %3$s</string>
+
+    <string name="placeholder_thresholds_note">सांकेतिक सीमाएँ — विशेषज्ञ समीक्षा लंबित</string>
+    <string name="no_verified_lab_info">कोई सत्यापित प्रयोगशाला जानकारी उपलब्ध नहीं है</string>
+</resources>

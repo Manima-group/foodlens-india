@@ -1,0 +1,12 @@
+{
+  "analysis_status": "insufficient_data",
+  "score_value": null,
+  "methodology": {"id": "…", "version": "pending", "status": "draft"},
+  "rule_version": "nutr-ind-0.1-placeholder",
+  "inputs": [
+    {"field": "energy_kcal", "value": 512, "basis": "per_100g", "source": "label_declared", "observed_at": "2026-10-02T00:00:00Z"}
+  ],
+  "missing_fields": ["saturated_fat_g", "sodium_mg"],
+  "factors": [],
+  "limitations": ["Score requires saturated fat and sodium; not declared on submitted label."]
+}
