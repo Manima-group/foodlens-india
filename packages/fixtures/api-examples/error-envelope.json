@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "PRODUCT_NOT_FOUND",
+    "message": "No product found for this barcode.",
+    "details": {"gtin14": "08901234567890"},
+    "request_id": "01JD…"
+  }
+}

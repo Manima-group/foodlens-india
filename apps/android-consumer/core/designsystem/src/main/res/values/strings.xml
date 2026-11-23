@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- analysis_status (SPEC §2). The insufficient_data text is fixed by Tier 1 DoD. -->
+    <string name="status_scored">Scored</string>
+    <string name="status_insufficient_data">Insufficient data to score</string>
+    <string name="status_methodology_pending">No score yet: scoring method is pending expert review</string>
+    <string name="status_unverified_provisional">Unverified: community data awaiting review</string>
+    <string name="status_not_applicable">Score not applicable to this product</string>
+
+    <!-- evidence_level (T6) -->
+    <string name="evidence_label_declared">Declared on label</string>
+    <string name="evidence_community_submitted">Community submitted</string>
+    <string name="evidence_manufacturer_submitted">Manufacturer submitted</string>
+    <string name="evidence_reviewer_verified">Reviewer verified</string>
+    <string name="evidence_laboratory_tested">Laboratory tested</string>
+
+    <!-- T2 -->
+    <string name="sponsored_label">Sponsored</string>
+    <string name="sponsored_content_description">%1$s: %2$s. %3$s</string>
+
+    <!-- SPEC §9.3, §10.9 item 6 (T5) -->
+    <string name="placeholder_thresholds_note">Indicative thresholds — pending expert review</string>
+    <string name="no_verified_lab_info">No verified laboratory information available</string>
+</resources>

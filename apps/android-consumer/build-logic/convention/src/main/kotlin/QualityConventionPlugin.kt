@@ -6,7 +6,7 @@ import org.jlleitschuh.gradle.ktlint.KtlintExtension
 
 /** Detekt + ktlint on every module (SPEC §10.12 static checks). */
 class QualityConventionPlugin : Plugin<Project> {
-    override fun apply(target: Project) = with(target) {
+    override fun apply(target: Project): Unit = with(target) {
         pluginManager.apply("io.gitlab.arturbosch.detekt")
         pluginManager.apply("org.jlleitschuh.gradle.ktlint")
         extensions.configure<DetektExtension> {

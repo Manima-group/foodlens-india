@@ -11,9 +11,11 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 
 /** Pure Kotlin/JVM module (no Android): :core:model, :core:gtin, :core:testing. */
 class JvmLibraryConventionPlugin : Plugin<Project> {
-    override fun apply(target: Project) = with(target) {
+    override fun apply(target: Project): Unit = with(target) {
         pluginManager.apply("org.jetbrains.kotlin.jvm")
         pluginManager.apply("foodlens.quality")
+        // Android Lint also analyses pure-Kotlin modules (SPEC §10.12).
+        pluginManager.apply("com.android.lint")
         val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
         extensions.configure<KotlinJvmProjectExtension> {

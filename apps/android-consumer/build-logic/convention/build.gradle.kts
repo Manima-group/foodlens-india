@@ -23,3 +23,24 @@ gradlePlugin {
         }
     }
 }
+
+gradlePlugin {
+    plugins {
+        register("androidApplication") {
+            id = "foodlens.android.application"
+            implementationClass = "AndroidApplicationConventionPlugin"
+        }
+        register("androidLibrary") {
+            id = "foodlens.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidCompose") {
+            id = "foodlens.android.compose"
+            implementationClass = "AndroidComposeConventionPlugin"
+        }
+        register("hilt") {
+            id = "foodlens.hilt"
+            implementationClass = "HiltConventionPlugin"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="manual_entry_title">बारकोड दर्ज करें</string>
+    <string name="manual_entry_label">बारकोड नंबर</string>
+    <string name="manual_entry_submit">खोजें</string>
+    <string name="manual_entry_ambiguous">यह नंबर दो अलग बारकोड हो सकता है। पैक पर कौन सा छपा है?</string>
+    <string name="manual_entry_candidate">%1$s: %2$s</string>
+    <string name="error_invalid_barcode">यह मान्य बारकोड नहीं है। 8, 12, 13 या 14 अंक दर्ज करें।</string>
+    <string name="error_invalid_check_digit">अंतिम अंक मेल नहीं खाता। कृपया नंबर जाँचें।</string>
+</resources>

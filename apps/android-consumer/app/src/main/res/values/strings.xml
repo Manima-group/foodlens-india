@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Working name; needs trademark clearance (SPEC §18). -->
+    <string name="app_name" translatable="false">FoodLens India</string>
+    <string name="home_enter_barcode">Enter barcode</string>
+</resources>
