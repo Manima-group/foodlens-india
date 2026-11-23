@@ -1,13 +1,16 @@
-# FoodLens India
+# AAHAR: Know What You Eat
+
+(Repository and package name: FoodLens India, `com.manima.foodlens`; see ADR 0006.)
 
 Free Android app that scans packaged-food barcodes sold in India and explains the label. Source of truth: [`docs/SPEC.md`](docs/SPEC.md). Working rules: [`CLAUDE.md`](CLAUDE.md). Latest status: [`docs/REPORT.md`](docs/REPORT.md).
 
-> Status (2026-11-23): Tier 1 Android in progress. The app opens, and you can type a barcode and see it validated. Scanning, product details and the backend API are not built yet, so a valid barcode currently shows only its 14-digit form.
+> Status (2026-11-23): The Tier 1 app and API work end to end against synthetic seed data. That covers onboarding, home, camera and manual barcode lookup, and product detail (status, ingredients, nutrition, declared allergens, sources). It also covers search, compare, alternatives, recent scans, favourites, missing-product submission, and offline and error states. Scores are never computed on the phone. Seed products show "methodology pending", "unverified provisional" or "insufficient data". See [`docs/REPORT.md`](docs/REPORT.md) for what is verified and what is left.
 
 ## Repository layout
 
 ```
 apps/android-consumer/   Android app (Gradle multi-module)
+services/api/            FastAPI backend + PostgreSQL (Alembic, synthetic seed)
 packages/fixtures/       Shared test vectors (GTIN, enums, API examples)
 docs/                    SPEC, ADRs, blockers, risk register, reports
 Makefile                 make android-test | android-debug | lint | test
@@ -75,20 +78,46 @@ emulator -avd foodlens
 
 On Windows, use `gradlew.bat` instead of `./gradlew`.
 
-### 4. Try it
+### 4. Start the backend
 
-1. Tap **Enter barcode**.
-2. Type one of these codes, then tap **Look up**:
-   - `8901234567890` is valid and shows `08901234567890`.
-   - `8901234567891` shows the "last digit doesn't match" error.
-   - `01234565` can be read as two barcode types, so the app asks you to choose one.
-3. To try Hindi, open the device's **Settings → Apps → FoodLens India (debug) → Language** and choose हिन्दी.
+The app needs the API for lookups. Cached products and recent scans work offline.
 
-### Backend API (not built yet)
+**With Docker:** `make up && make seed`.
 
-Debug builds call `http://10.0.2.2:8000`, which is your computer's `localhost` as seen from the emulator (SPEC §16). Once the API exists:
-- **Emulator:** start the API with `make up`. The emulator reaches it at `10.0.2.2:8000`.
-- **Physical phone:** run `adb reverse tcp:8000 tcp:8000` first.
+**Without Docker** (PostgreSQL 16 running locally, Python with [uv](https://docs.astral.sh/uv/)):
+
+```bash
+cp .env.example .env            # dummy values; set DATABASE_URL to your local Postgres
+export DATABASE_URL=postgresql+asyncpg://postgres:<password>@127.0.0.1:5432/foodlens
+make api-seed                   # synthetic products, all labelled "(Synthetic)"
+make api-dev                    # migrates, then serves on 0.0.0.0:8000
+```
+
+### 5. Connect the app to the backend
+
+| Where the app runs | What to do |
+|---|---|
+| Emulator | Nothing. Debug builds call `http://10.0.2.2:8000`, the emulator's alias for your computer. |
+| Physical phone on USB (e.g. Nothing Phone) | Run `adb reverse tcp:8000 tcp:8000`. On a real device, debug builds call `http://127.0.0.1:8000`, which the reverse tunnel forwards to your computer. Run the command again after you reconnect the cable. |
+| Physical phone on Wi-Fi | In the app, open **Settings → Developer**, then choose or type `http://<your-computer-LAN-IP>:8000` and tap **Test connection**. This works in debug builds only. |
+
+### 6. Try it
+
+Open [`docs/testing/seed-barcodes.html`](docs/testing/seed-barcodes.html) on your computer screen (or print it), then tap **Scan a barcode** on the home screen. Or tap **Enter barcode** and type one of these:
+
+- `8901234567890`: Masala Crunch Namkeen (Synthetic). Shows the full product page.
+- `2900000000025`: insufficient data. Shows no score and explains what's missing.
+- `2900000009998`: valid but unknown. The app offers **Add this product** (photo submission).
+- `8901234567891`: shows the "last digit doesn't match" error.
+- `01234565`: can be read as two barcode types, so the app asks you to choose one.
+
+Then try these:
+- Search.
+- Favourites: tap the heart on a product.
+- Compare: select 2 to 4 favourites under **My products**.
+- Airplane mode: cached products still open, and a new lookup is queued and retried.
+
+To use Hindi, choose हिन्दी during onboarding or in **Settings → Language**.
 
 ## Tests and checks
 
@@ -99,9 +128,13 @@ cd apps/android-consumer
 ./gradlew lint                      # Android Lint
 ./gradlew ktlintFormat              # auto-fix formatting
 
+# Against a running, seeded API (end-to-end core loop + contribution upload):
+FOODLENS_LIVE_API=http://127.0.0.1:8000 ./gradlew :core:data:testDebugUnitTest --tests '*LiveApiTest*'
+
 # From the repo root:
 make android-test                   # test + lint + detekt + ktlintCheck
-make lint test                      # everything (api/web are skipped until they exist)
+make api-test api-lint              # backend (needs PostgreSQL)
+make lint test                      # everything (web is skipped until it exists)
 ```
 
 Test reports are written to `<module>/build/reports/tests/` and lint reports to `<module>/build/reports/`.
@@ -114,6 +147,7 @@ Test reports are written to `<module>/build/reports/tests/` and lint reports to 
 | `requires ... compile against version 37.1 or later` | Install `platforms;android-37.2`. |
 | `Unsupported class file major version` / JDK errors | Use JDK 21. In Android Studio: Settings → Build Tools → Gradle → Gradle JDK. |
 | `429 Too Many Requests` while downloading dependencies | The build already tries Google's Maven Central mirror first. Wait a minute and retry. |
+| A phone says "You're offline" or "temporarily unavailable" while online | Run `adb reverse tcp:8000 tcp:8000`, or set the LAN URL in Settings → Developer. Check that the API is listening on `0.0.0.0:8000`. |
 | `adb: no devices` | Start an emulator, or turn on USB debugging on your phone and accept the prompt. |
 
 ## Docs

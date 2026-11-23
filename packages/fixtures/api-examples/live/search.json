@@ -1,0 +1,149 @@
+{
+ "items": [
+  {
+   "id": "01a2083e-7085-7f31-81d4-04c03e8f27c4",
+   "gtin14": "02900000000223",
+   "name": "Atta Noodles (Synthetic)",
+   "brand": {
+    "id": "01a2083e-6fd3-7ea0-b1d9-38c5ebec668d",
+    "name": "Test Kitchen Brands (Synthetic)",
+    "is_verified": false
+   },
+   "category": {
+    "id": "01a2083e-6fce-79e7-a9b9-84d90a91b543",
+    "slug": "instant-noodles",
+    "name": "Instant noodles & pasta"
+   },
+   "variant": {
+    "net_quantity": 280.0,
+    "unit": "g",
+    "pack_format": "pack"
+   },
+   "analysis_status": "unverified_provisional",
+   "data_freshness": "fresh",
+   "headline_indicators": [
+    {
+     "nutrient": "fat_g",
+     "level": "medium",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "level": "low",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    }
+   ]
+  },
+  {
+   "id": "01a2083e-707e-7b42-a733-b8acef4391cf",
+   "gtin14": "02900000000216",
+   "name": "Masala Noodles (Synthetic)",
+   "brand": {
+    "id": "01a2083e-6fd3-7919-9b89-e848f2e2e743",
+    "name": "Placeholder Bakers (Synthetic)",
+    "is_verified": false
+   },
+   "category": {
+    "id": "01a2083e-6fce-79e7-a9b9-84d90a91b543",
+    "slug": "instant-noodles",
+    "name": "Instant noodles & pasta"
+   },
+   "variant": {
+    "net_quantity": 70.0,
+    "unit": "g",
+    "pack_format": "pack"
+   },
+   "analysis_status": "methodology_pending",
+   "data_freshness": "fresh",
+   "headline_indicators": [
+    {
+     "nutrient": "fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "level": "low",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    }
+   ]
+  },
+  {
+   "id": "01a2083e-709f-74dd-9fe7-d7b22c1e0d22",
+   "gtin14": "02900000000261",
+   "name": "Tomato Noodles (Synthetic)",
+   "brand": {
+    "id": "01a2083e-6fd3-79a0-b6d4-d16cda314e47",
+    "name": "Example Dairy (Synthetic)",
+    "is_verified": false
+   },
+   "category": {
+    "id": "01a2083e-6fce-79e7-a9b9-84d90a91b543",
+    "slug": "instant-noodles",
+    "name": "Instant noodles & pasta"
+   },
+   "variant": {
+    "net_quantity": 280.0,
+    "unit": "g",
+    "pack_format": "pack"
+   },
+   "analysis_status": "methodology_pending",
+   "data_freshness": "fresh",
+   "headline_indicators": [
+    {
+     "nutrient": "fat_g",
+     "level": "medium",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "level": "low",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    }
+   ]
+  }
+ ],
+ "next_cursor": "eyJvIjogM30"
+}

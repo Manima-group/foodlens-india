@@ -14,3 +14,6 @@ Pre-filled from SPEC §18; kept current by whoever is working.
 | Android: Firebase Test Lab device matrix (SPEC §10.12) | Eng | Device matrix tests | open: no account yet |
 | Object storage: S3/MinIO adapter, ClamAV scan, image re-encode (ADR 0004) | Eng | Contribution photos in production | open: local adapter only |
 | OCR worker (Tesseract eng+hin) + admin review queue | Eng | Contributions reaching the catalog | open: Tier 2 |
+| Docker Hub pull rate limit (429) in the cloud dev container | Eng | `make up` unverified here; API and Postgres run natively instead | open: environment |
+| No KVM in the cloud dev container, so no emulator | Eng | Instrumented/UI tests on a device, scanner fixture-image tests | open: run on a dev machine or Firebase Test Lab |
+| Play listing needed for the in-app update flow (ADR 0007) | Product | `426` update UX | open |

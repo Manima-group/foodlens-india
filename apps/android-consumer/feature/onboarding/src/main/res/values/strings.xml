@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="brand_name" translatable="false">AAHAR</string>
+    <string name="brand_tagline">Know What You Eat.</string>
+    <string name="onboarding_welcome_body">Scan a packaged food barcode to see its ingredients, nutrition facts and declared allergens explained in plain language.</string>
+    <string name="onboarding_language">Language</string>
+    <string name="language_system">Phone default</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिन्दी</string>
+    <string name="onboarding_how_title">How AAHAR works</string>
+    <string name="onboarding_how_scan">Scan the barcode, or type the number.</string>
+    <string name="onboarding_how_label">See what the label declares: ingredients, nutrition per 100 g and per serving, and allergens.</string>
+    <string name="onboarding_how_evidence">Every fact shows where it came from and how it was checked.</string>
+    <string name="onboarding_how_score">There is no overall score yet. Scores stay off until an expert-reviewed method is published, and missing data is never guessed.</string>
+    <string name="onboarding_how_free">Free to use without an account. Brands cannot pay to change what you see.</string>
+    <string name="onboarding_choices_title">Your choices</string>
+    <string name="onboarding_allergens">Highlight allergens (optional)</string>
+    <string name="onboarding_allergens_body">We\'ll point out these allergens when a label declares them. This uses the label only and is not a guarantee.</string>
+    <string name="onboarding_consent">Share anonymous scan counts</string>
+    <string name="onboarding_consent_body">Helps us see which products people look for. No name, location or contacts. You can change this in Settings.</string>
+    <string name="onboarding_guest_note">You\'re using AAHAR as a guest. Your history stays on this phone.</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_back">Back</string>
+    <string name="onboarding_start">Start scanning</string>
+    <string name="allergen_milk">Milk</string>
+    <string name="allergen_peanut">Peanut</string>
+    <string name="allergen_tree_nuts">Tree nuts</string>
+    <string name="allergen_gluten">Gluten cereals</string>
+    <string name="allergen_soy">Soy</string>
+    <string name="allergen_egg">Egg</string>
+    <string name="allergen_fish">Fish</string>
+    <string name="allergen_crustacean">Crustaceans</string>
+    <string name="allergen_sesame">Sesame</string>
+    <string name="allergen_mustard">Mustard</string>
+    <string name="allergen_sulphite">Sulphite</string>
+</resources>

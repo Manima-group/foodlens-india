@@ -18,4 +18,9 @@
 
     <string name="placeholder_thresholds_note">सांकेतिक सीमाएँ — विशेषज्ञ समीक्षा लंबित</string>
     <string name="no_verified_lab_info">कोई सत्यापित प्रयोगशाला जानकारी उपलब्ध नहीं है</string>
+
+    <string name="level_low">कम</string>
+    <string name="level_medium">मध्यम</string>
+    <string name="level_high">अधिक</string>
+    <string name="indicator_chip">%2$s: %1$s</string>
 </resources>

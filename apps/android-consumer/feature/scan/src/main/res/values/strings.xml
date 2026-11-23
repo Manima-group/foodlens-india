@@ -8,4 +8,18 @@
     <!-- Mapped from API/GTIN error codes, never from messages (SPEC §8.2). -->
     <string name="error_invalid_barcode">That isn\'t a valid barcode. Use 8, 12, 13 or 14 digits.</string>
     <string name="error_invalid_check_digit">The last digit doesn\'t match. Please check the number.</string>
+    <string name="back">Back</string>
+    <string name="scan_hint">Point the camera at the barcode on the pack</string>
+    <string name="scan_invalid">That barcode didn\'t read correctly. Hold steady and try again.</string>
+    <string name="scan_photo_none">No product barcode found in that photo.</string>
+    <string name="scan_enter_barcode">Enter barcode</string>
+    <string name="scan_from_photo">Scan from photo</string>
+    <string name="scan_torch_on">Light on</string>
+    <string name="scan_torch_off">Light off</string>
+    <string name="scan_permission_title">Camera access needed</string>
+    <string name="scan_permission_body">AAHAR uses the camera only to read barcodes. Photos are not saved or sent. You can also type the barcode number.</string>
+    <string name="scan_allow_camera">Allow camera</string>
+    <string name="scan_open_settings">Open settings</string>
+    <string name="scan_no_camera_title">No camera available</string>
+    <string name="scan_no_camera_body">Type the barcode number, or pick a photo of the barcode.</string>
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_recent">हाल के स्कैन</string>
+    <string name="library_favorites">पसंदीदा</string>
+    <string name="library_recent_empty_title">अभी कोई स्कैन नहीं</string>
+    <string name="library_recent_empty_body">आप जो उत्पाद स्कैन करते हैं या खोलते हैं वे यहाँ दिखते हैं, ऑफ़लाइन होने पर भी।</string>
+    <string name="library_scan">बारकोड स्कैन करें</string>
+    <string name="library_unknown_name">उत्पाद</string>
+    <string name="library_not_found">अभी AAHAR में नहीं है</string>
+    <string name="library_clear_history">इतिहास साफ़ करें</string>
+    <string name="library_clear_title">स्कैन इतिहास साफ़ करें?</string>
+    <string name="library_clear_body">इससे इस फ़ोन से आपके हाल के स्कैन हट जाएँगे। पसंदीदा बने रहेंगे।</string>
+    <string name="library_clear_confirm">साफ़ करें</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="library_local_note">आपका इतिहास केवल इसी फ़ोन पर सहेजा जाता है।</string>
+    <string name="library_favorites_empty_title">अभी कोई पसंदीदा नहीं</string>
+    <string name="library_favorites_empty_body">किसी उत्पाद को यहाँ सहेजने के लिए उस पर दिल का निशान दबाएँ।</string>
+    <string name="library_compare_hint">साथ-साथ तुलना के लिए 2 से 4 उत्पादों पर टिक करें।</string>
+    <string name="library_compare_selected">चुने गए की तुलना करें (%1$d)</string>
+    <string name="library_remove_favorite">%1$s को पसंदीदा से हटाएँ</string>
+</resources>

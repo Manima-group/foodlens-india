@@ -1,0 +1,70 @@
+{
+ "sources": [
+  {
+   "field_name": "allergens",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "carbohydrate_g",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "energy_kcal",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "fat_g",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "ingredients",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "protein_g",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "saturated_fat_g",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "sodium_mg",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field_name": "sugars_g",
+   "source": "synthetic_seed",
+   "licence_code": "SYNTHETIC",
+   "evidence_level": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  }
+ ],
+ "attributions": [
+  "Synthetic demonstration data. Not a real product."
+ ]
+}

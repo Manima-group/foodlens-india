@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="contribute_title">उत्पाद जोड़ें</string>
+    <string name="contribute_title_correction">समस्या बताएँ</string>
+    <string name="contribute_intro">बारकोड %1$s अभी AAHAR में नहीं है। पैक की साफ़ फ़ोटो जोड़ें। प्रकाशित होने से पहले हर सबमिशन की समीक्षा होती है।</string>
+    <string name="contribute_intro_correction">बारकोड %1$s में क्या गलत है, बताएँ। मौजूदा पैक की फ़ोटो से समीक्षक को जाँचने में मदद मिलती है।</string>
+    <string name="slot_front">पैक का आगे का भाग</string>
+    <string name="slot_front_hint">उत्पाद का नाम और ब्रांड साफ़ दिखे</string>
+    <string name="slot_ingredients">सामग्री सूची</string>
+    <string name="slot_ingredients_hint">पूरी सूची, साफ़ फ़ोकस में</string>
+    <string name="slot_nutrition">पोषण तालिका</string>
+    <string name="slot_nutrition_hint">सभी पंक्तियाँ और सर्विंग का आकार</string>
+    <string name="slot_back">पैक का पिछला भाग</string>
+    <string name="slot_back_hint">एलर्जेन और वेज चिह्न, अगर दिखें</string>
+    <string name="contribute_take_photo">फ़ोटो लें</string>
+    <string name="contribute_choose_photo">फ़ोटो चुनें</string>
+    <string name="contribute_rotate">%1$s फ़ोटो घुमाएँ</string>
+    <string name="contribute_remove">%1$s फ़ोटो हटाएँ</string>
+    <string name="contribute_name">उत्पाद का नाम (वैकल्पिक)</string>
+    <string name="contribute_brand">ब्रांड (वैकल्पिक)</string>
+    <string name="contribute_notes">कुछ और? (वैकल्पिक)</string>
+    <string name="contribute_notes_correction">क्या गलत है?</string>
+    <string name="contribute_privacy">अपलोड से पहले फ़ोटो का आकार छोटा किया जाता है और स्थान की जानकारी हटा दी जाती है। कृपया लोगों या निजी जानकारी को शामिल न करें।</string>
+    <string name="contribute_need_photo">कम से कम एक फ़ोटो जोड़ें।</string>
+    <string name="contribute_bad_image">एक फ़ोटो पढ़ी नहीं जा सकी। कृपया उसे फिर से चुनें।</string>
+    <string name="contribute_submit">जमा करें</string>
+    <string name="contribute_preparing">फ़ोटो तैयार हो रही हैं…</string>
+    <string name="contribute_done_title">धन्यवाद!</string>
+    <string name="contribute_done_body">आपका सबमिशन सहेज लिया गया है। यह अपने आप अपलोड होगा, अभी ऑफ़लाइन होने पर भी, और AAHAR में दिखने से पहले समीक्षक इसकी जाँच करेगा।</string>
+    <string name="contribute_view_mine">मेरे सबमिशन देखें</string>
+    <string name="contribute_back">हो गया</string>
+    <string name="contribute_disabled_title">सबमिशन अभी रुके हुए हैं</string>
+    <string name="contribute_disabled_body">उत्पाद जोड़ना अभी बंद है। कृपया बाद में कोशिश करें।</string>
+
+    <string name="mine_title">मेरे सबमिशन</string>
+    <string name="mine_empty_title">अभी कोई सबमिशन नहीं</string>
+    <string name="mine_empty_body">जब आप कोई उत्पाद जोड़ेंगे, तो उसकी स्थिति यहाँ देख सकेंगे।</string>
+    <string name="mine_unnamed">बिना नाम का उत्पाद</string>
+    <string name="mine_state_queued">अपलोड की प्रतीक्षा में</string>
+    <string name="mine_state_uploading">अपलोड हो रहा है…</string>
+    <string name="mine_state_submitted">समीक्षा के लिए जमा</string>
+    <string name="mine_state_failed">अपलोड नहीं हो सका</string>
+    <string name="mine_retry">फिर कोशिश करें</string>
+</resources>

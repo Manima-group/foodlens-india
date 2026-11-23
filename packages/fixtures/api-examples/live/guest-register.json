@@ -1,0 +1,10 @@
+{
+ "guest_token": "ie9BA-_H-hv5nohRmo79yu0eLkQ6ucuifR02antvzew",
+ "token_type": "Bearer",
+ "expires_at": "2027-02-21T14:09:45.577818Z",
+ "scopes": [
+  "catalog.read",
+  "contributions.write",
+  "scan_events.write"
+ ]
+}

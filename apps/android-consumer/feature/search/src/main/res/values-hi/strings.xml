@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_hint">उत्पाद या ब्रांड खोजें</string>
+    <string name="search_clear">खोज साफ़ करें</string>
+    <string name="search_empty_title">कोई उत्पाद नहीं मिला</string>
+    <string name="search_empty_body">कोई दूसरा शब्द आज़माएँ, या बारकोड स्कैन करें।</string>
+    <string name="search_order_note">परिणाम प्रासंगिकता और नाम के क्रम में हैं। ब्रांड इस क्रम को बदलवाने के लिए भुगतान नहीं कर सकते।</string>
+</resources>

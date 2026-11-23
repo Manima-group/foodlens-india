@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_channel_lookups">ऑफ़लाइन स्कैन</string>
+    <string name="notification_lookups_title">आपके ऑफ़लाइन स्कैन तैयार हैं</string>
+    <plurals name="notification_lookups_text">
+        <item quantity="one">ऑफ़लाइन स्कैन किया गया %d उत्पाद अब उपलब्ध है।</item>
+        <item quantity="other">ऑफ़लाइन स्कैन किए गए %d उत्पाद अब उपलब्ध हैं।</item>
+    </plurals>
+</resources>

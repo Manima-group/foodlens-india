@@ -38,7 +38,7 @@ class ApiContractTest {
         val lookup = parse<ProductLookupDto>("product-by-barcode-200.json")
         assertEquals("08901234567890", lookup.product.gtin14)
         assertEquals(DataFreshness.FRESH, lookup.product.dataFreshness)
-        assertEquals(EvidenceLevel.REVIEWER_VERIFIED, lookup.product.labelVersion.evidenceLevel)
+        assertEquals(EvidenceLevel.REVIEWER_VERIFIED, lookup.product.labelVersion?.evidenceLevel)
         assertEquals(AnalysisStatus.METHODOLOGY_PENDING, lookup.analysisSummary.analysisStatus)
         assertNull(lookup.analysisSummary.scoreValue)
         val indicator = lookup.analysisSummary.headlineIndicators.single()

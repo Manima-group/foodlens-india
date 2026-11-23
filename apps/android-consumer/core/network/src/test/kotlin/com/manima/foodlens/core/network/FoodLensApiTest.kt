@@ -60,6 +60,42 @@ class FoodLensApiTest {
     }
 
     @Test
+    fun `guest token is sent as bearer and 304 maps to NotModified`() = runTest {
+        val authed = FoodLensClient.create(
+            baseUrl = server.url("/").toString(),
+            headers = ClientHeaders(appVersionCode = 7, languageTag = { "en" }),
+            tokens = { "tok123" }
+        )
+        server.enqueue(MockResponse(code = 304))
+        assertEquals(ApiResult.NotModified, authed.productDetail("p1", etag = "\"abc\""))
+        val request = server.takeRequest()
+        assertEquals("Bearer tok123", request.headers["Authorization"])
+        assertEquals("\"abc\"", request.headers["If-None-Match"])
+    }
+
+    @Test
+    fun `base url override and upload use only the issued path`() = runTest {
+        val rebased = FoodLensClient.create(
+            baseUrl = FoodLensClient.PLACEHOLDER_BASE_URL,
+            headers = ClientHeaders(appVersionCode = 7, languageTag = { "en" }),
+            baseUrlProvider = { server.url("/").toString() }
+        )
+        server.enqueue(MockResponse(code = 204))
+        val upload = com.manima.foodlens.core.network.model.PhotoUploadDto(
+            photoId = "ph1",
+            uploadUrl = "http://10.0.2.2:8000/api/v1/uploads/tok",
+            uploadMethod = "PUT",
+            uploadHeaders = mapOf("Content-Type" to "image/jpeg"),
+            expiresAt = "2026-11-23T00:00:00Z"
+        )
+        assertTrue(rebased.upload(upload, byteArrayOf(1, 2, 3)) is ApiResult.Success)
+        val request = server.takeRequest()
+        assertEquals("PUT", request.method)
+        assertEquals("/api/v1/uploads/tok", request.url.encodedPath)
+        assertEquals("image/jpeg", request.headers["Content-Type"])
+    }
+
+    @Test
     fun `connection failure is reported as offline`() = runTest {
         server.close()
         val result = client.metaConfig()

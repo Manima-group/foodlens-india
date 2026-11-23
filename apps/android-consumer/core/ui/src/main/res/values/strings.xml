@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">Loading…</string>
+    <string name="navigate_back">Back</string>
+    <string name="retry">Try again</string>
+    <string name="error_title">Something went wrong</string>
+    <string name="offline_title">You\'re offline</string>
+    <string name="offline_banner">You\'re offline. Showing saved information.</string>
+
+    <!-- SPEC §8.2 codes -->
+    <string name="error_offline">Check your internet connection and try again.</string>
+    <string name="error_not_found">We couldn\'t find this item.</string>
+    <string name="error_invalid_barcode">That isn\'t a valid barcode.</string>
+    <string name="error_invalid_check_digit">The last digit of the barcode doesn\'t match. Please check the number.</string>
+    <string name="error_ambiguous">This number could be two different barcodes. Please choose one.</string>
+    <string name="error_rate_limited">Too many requests. Please wait a moment and try again.</string>
+    <string name="error_maintenance">AAHAR is under maintenance. Please try again soon.</string>
+    <string name="error_unavailable">The service is temporarily unavailable. Please try again.</string>
+    <string name="error_update_required">Please update AAHAR to keep using it.</string>
+    <string name="error_session">Your session expired. Please try again.</string>
+    <string name="error_generic">Please try again in a moment.</string>
+
+    <!-- Nutrients (SPEC §9.1) -->
+    <string name="nutrient_energy">Energy (kcal)</string>
+    <string name="nutrient_energy_kj">Energy (kJ)</string>
+    <string name="nutrient_fat">Total fat</string>
+    <string name="nutrient_saturated_fat">Saturated fat</string>
+    <string name="nutrient_trans_fat">Trans fat</string>
+    <string name="nutrient_carbohydrate">Carbohydrate</string>
+    <string name="nutrient_sugars">Total sugars</string>
+    <string name="nutrient_added_sugars">Added sugars</string>
+    <string name="nutrient_fibre">Dietary fibre</string>
+    <string name="nutrient_protein">Protein</string>
+    <string name="nutrient_sodium">Sodium</string>
+    <string name="nutrient_salt">Salt</string>
+    <string name="nutrient_cholesterol">Cholesterol</string>
+</resources>

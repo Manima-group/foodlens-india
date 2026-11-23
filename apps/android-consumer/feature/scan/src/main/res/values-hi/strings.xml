@@ -7,4 +7,18 @@
     <string name="manual_entry_candidate">%1$s: %2$s</string>
     <string name="error_invalid_barcode">यह मान्य बारकोड नहीं है। 8, 12, 13 या 14 अंक दर्ज करें।</string>
     <string name="error_invalid_check_digit">अंतिम अंक मेल नहीं खाता। कृपया नंबर जाँचें।</string>
+    <string name="back">वापस</string>
+    <string name="scan_hint">कैमरा को पैक पर छपे बारकोड की ओर रखें</string>
+    <string name="scan_invalid">बारकोड ठीक से नहीं पढ़ा गया। स्थिर रखें और फिर कोशिश करें।</string>
+    <string name="scan_photo_none">उस फ़ोटो में कोई उत्पाद बारकोड नहीं मिला।</string>
+    <string name="scan_enter_barcode">बारकोड लिखें</string>
+    <string name="scan_from_photo">फ़ोटो से स्कैन करें</string>
+    <string name="scan_torch_on">लाइट चालू</string>
+    <string name="scan_torch_off">लाइट बंद</string>
+    <string name="scan_permission_title">कैमरा की अनुमति चाहिए</string>
+    <string name="scan_permission_body">AAHAR कैमरा का उपयोग केवल बारकोड पढ़ने के लिए करता है। फ़ोटो न तो सहेजी जाती हैं, न भेजी जाती हैं। आप बारकोड नंबर भी लिख सकते हैं।</string>
+    <string name="scan_allow_camera">कैमरा की अनुमति दें</string>
+    <string name="scan_open_settings">सेटिंग्स खोलें</string>
+    <string name="scan_no_camera_title">कोई कैमरा उपलब्ध नहीं</string>
+    <string name="scan_no_camera_body">बारकोड नंबर लिखें, या बारकोड की फ़ोटो चुनें।</string>
 </resources>

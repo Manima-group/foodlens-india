@@ -1,0 +1,28 @@
+{
+ "id": "01a2083e-6faf-7b2e-a425-f8f9bb60e996",
+ "key": "gram_flour",
+ "name": "Gram flour (besan)",
+ "description": "Flour from chickpeas.",
+ "is_additive": false,
+ "ins_code": null,
+ "function": null,
+ "aliases": [
+  {
+   "lang": "en",
+   "script": "Latn",
+   "alias": "gram flour"
+  },
+  {
+   "lang": "en",
+   "script": "Latn",
+   "alias": "besan"
+  },
+  {
+   "lang": "hi",
+   "script": "Deva",
+   "alias": "बेसन"
+  }
+ ],
+ "references": [],
+ "references_note": "No reviewed scientific references yet; pending expert review."
+}

@@ -38,6 +38,10 @@ gradlePlugin {
             id = "foodlens.android.compose"
             implementationClass = "AndroidComposeConventionPlugin"
         }
+        register("androidFeature") {
+            id = "foodlens.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
         register("hilt") {
             id = "foodlens.hilt"
             implementationClass = "HiltConventionPlugin"

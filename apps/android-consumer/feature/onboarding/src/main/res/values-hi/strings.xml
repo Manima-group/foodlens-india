@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="brand_tagline">जानिए आप क्या खाते हैं।</string>
+    <string name="onboarding_welcome_body">पैक्ड फ़ूड का बारकोड स्कैन करें और उसकी सामग्री, पोषण तथ्य और घोषित एलर्जेन आसान भाषा में देखें।</string>
+    <string name="onboarding_language">भाषा</string>
+    <string name="language_system">फ़ोन की भाषा</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिन्दी</string>
+    <string name="onboarding_how_title">AAHAR कैसे काम करता है</string>
+    <string name="onboarding_how_scan">बारकोड स्कैन करें, या नंबर लिखें।</string>
+    <string name="onboarding_how_label">देखें कि लेबल पर क्या घोषित है: सामग्री, प्रति 100 ग्राम और प्रति सर्विंग पोषण, और एलर्जेन।</string>
+    <string name="onboarding_how_evidence">हर तथ्य बताता है कि वह कहाँ से आया और कैसे जाँचा गया।</string>
+    <string name="onboarding_how_score">अभी कोई कुल स्कोर नहीं है। विशेषज्ञ-समीक्षित पद्धति प्रकाशित होने तक स्कोर बंद रहेंगे, और कमी वाले डेटा का कभी अनुमान नहीं लगाया जाता।</string>
+    <string name="onboarding_how_free">बिना खाते के मुफ़्त। ब्रांड आपको दिखने वाली जानकारी बदलवाने के लिए भुगतान नहीं कर सकते।</string>
+    <string name="onboarding_choices_title">आपकी पसंद</string>
+    <string name="onboarding_allergens">एलर्जेन हाइलाइट करें (वैकल्पिक)</string>
+    <string name="onboarding_allergens_body">जब लेबल पर ये एलर्जेन घोषित होंगे, हम इन्हें दिखाएँगे। यह केवल लेबल पर आधारित है और गारंटी नहीं है।</string>
+    <string name="onboarding_consent">गुमनाम स्कैन गिनती साझा करें</string>
+    <string name="onboarding_consent_body">इससे हमें पता चलता है कि लोग कौन से उत्पाद खोजते हैं। कोई नाम, स्थान या संपर्क नहीं। इसे आप सेटिंग्स में बदल सकते हैं।</string>
+    <string name="onboarding_guest_note">आप AAHAR को अतिथि के रूप में उपयोग कर रहे हैं। आपका इतिहास इसी फ़ोन पर रहता है।</string>
+    <string name="onboarding_next">आगे</string>
+    <string name="onboarding_back">पीछे</string>
+    <string name="onboarding_start">स्कैन शुरू करें</string>
+    <string name="allergen_milk">दूध</string>
+    <string name="allergen_peanut">मूंगफली</string>
+    <string name="allergen_tree_nuts">मेवे</string>
+    <string name="allergen_gluten">ग्लूटेन वाले अनाज</string>
+    <string name="allergen_soy">सोया</string>
+    <string name="allergen_egg">अंडा</string>
+    <string name="allergen_fish">मछली</string>
+    <string name="allergen_crustacean">क्रस्टेशियन</string>
+    <string name="allergen_sesame">तिल</string>
+    <string name="allergen_mustard">सरसों</string>
+    <string name="allergen_sulphite">सल्फाइट</string>
+</resources>

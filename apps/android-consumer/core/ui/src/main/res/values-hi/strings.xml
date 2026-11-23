@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hindi drafts: need native-speaker review before release (RISK_REGISTER R2). -->
+    <string name="loading">लोड हो रहा है…</string>
+    <string name="navigate_back">वापस</string>
+    <string name="retry">फिर से कोशिश करें</string>
+    <string name="error_title">कुछ गलत हो गया</string>
+    <string name="offline_title">आप ऑफ़लाइन हैं</string>
+    <string name="offline_banner">आप ऑफ़लाइन हैं। सहेजी गई जानकारी दिखाई जा रही है।</string>
+
+    <string name="error_offline">अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें।</string>
+    <string name="error_not_found">यह आइटम नहीं मिला।</string>
+    <string name="error_invalid_barcode">यह मान्य बारकोड नहीं है।</string>
+    <string name="error_invalid_check_digit">बारकोड का आख़िरी अंक मेल नहीं खाता। कृपया नंबर जाँचें।</string>
+    <string name="error_ambiguous">यह नंबर दो अलग बारकोड हो सकता है। कृपया एक चुनें।</string>
+    <string name="error_rate_limited">बहुत ज़्यादा अनुरोध। कृपया थोड़ी देर बाद कोशिश करें।</string>
+    <string name="error_maintenance">AAHAR का रखरखाव चल रहा है। कृपया जल्द ही फिर कोशिश करें।</string>
+    <string name="error_unavailable">सेवा अभी उपलब्ध नहीं है। कृपया फिर से कोशिश करें।</string>
+    <string name="error_update_required">AAHAR का उपयोग जारी रखने के लिए कृपया इसे अपडेट करें।</string>
+    <string name="error_session">आपका सत्र समाप्त हो गया। कृपया फिर से कोशिश करें।</string>
+    <string name="error_generic">कृपया थोड़ी देर में फिर से कोशिश करें।</string>
+
+    <string name="nutrient_energy">ऊर्जा (kcal)</string>
+    <string name="nutrient_energy_kj">ऊर्जा (kJ)</string>
+    <string name="nutrient_fat">कुल वसा</string>
+    <string name="nutrient_saturated_fat">संतृप्त वसा</string>
+    <string name="nutrient_trans_fat">ट्रांस वसा</string>
+    <string name="nutrient_carbohydrate">कार्बोहाइड्रेट</string>
+    <string name="nutrient_sugars">कुल शर्करा</string>
+    <string name="nutrient_added_sugars">अतिरिक्त शर्करा</string>
+    <string name="nutrient_fibre">आहार फाइबर</string>
+    <string name="nutrient_protein">प्रोटीन</string>
+    <string name="nutrient_sodium">सोडियम</string>
+    <string name="nutrient_salt">नमक</string>
+    <string name="nutrient_cholesterol">कोलेस्ट्रॉल</string>
+</resources>
