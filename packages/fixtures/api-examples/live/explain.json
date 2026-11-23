@@ -1,0 +1,67 @@
+{
+ "analysis_status": "methodology_pending",
+ "score_value": null,
+ "methodology": {
+  "id": "01a2083e-6f9c-73bf-adf0-a74866b2c696",
+  "version": "pending",
+  "status": "draft"
+ },
+ "rule_version": "nutr-ind-0.1-placeholder",
+ "inputs": [
+  {
+   "field": "energy_kcal",
+   "value": 512.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field": "fat_g",
+   "value": 30.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field": "saturated_fat_g",
+   "value": 12.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field": "carbohydrate_g",
+   "value": 52.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field": "sugars_g",
+   "value": 4.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field": "protein_g",
+   "value": 8.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  },
+  {
+   "field": "sodium_mg",
+   "value": 820.0,
+   "basis": "per_100g",
+   "source": "reviewer_verified",
+   "observed_at": "2026-10-21T11:50:39.316596Z"
+  }
+ ],
+ "missing_fields": [],
+ "factors": [],
+ "limitations": [
+  "No public score: the scoring methodology is pending expert review.",
+  "Indicative thresholds — pending expert review."
+ ]
+}

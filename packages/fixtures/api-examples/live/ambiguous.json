@@ -1,0 +1,19 @@
+{
+ "error": {
+  "code": "AMBIGUOUS_BARCODE",
+  "message": "The barcode could be read more than one way.",
+  "details": {
+   "candidates": [
+    {
+     "gtin14": "00000001234565",
+     "symbology": "EAN_8"
+    },
+    {
+     "gtin14": "00012345000065",
+     "symbology": "UPC_E"
+    }
+   ]
+  },
+  "request_id": "01a208bd-cc13-7849-b363-9cbb5edf6f1a"
+ }
+}

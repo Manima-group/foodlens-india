@@ -1,0 +1,85 @@
+{
+ "items": [
+  {
+   "id": "01a2083e-6fce-728d-9f86-36b823a9e02e",
+   "slug": "bakery",
+   "name": "Breads & bakery",
+   "name_hi": "ब्रेड और बेकरी",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-7e98-ad47-0aa5e3154220",
+   "slug": "biscuits-cookies",
+   "name": "Biscuits & cookies",
+   "name_hi": "बिस्कुट और कुकीज़",
+   "parent_id": null,
+   "product_count": 7
+  },
+  {
+   "id": "01a2083e-6fce-7089-b611-c8c76e355524",
+   "slug": "breakfast-cereals",
+   "name": "Breakfast cereals",
+   "name_hi": "नाश्ते के अनाज",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-782d-b55d-32b317e2ec5d",
+   "slug": "chocolates-confectionery",
+   "name": "Chocolates & confectionery",
+   "name_hi": "चॉकलेट और मिठाई",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-7403-bd4c-8aa30b0e70f8",
+   "slug": "dairy-drinks",
+   "name": "Milk & dairy drinks",
+   "name_hi": "दूध और डेयरी पेय",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-7788-aa92-02b54a7a3c08",
+   "slug": "fruit-beverages",
+   "name": "Juices & fruit drinks",
+   "name_hi": "जूस और फ्रूट ड्रिंक",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-79e7-a9b9-84d90a91b543",
+   "slug": "instant-noodles",
+   "name": "Instant noodles & pasta",
+   "name_hi": "इंस्टेंट नूडल्स",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+   "slug": "namkeen-savoury-snacks",
+   "name": "Namkeen & savoury snacks",
+   "name_hi": "नमकीन और स्नैक्स",
+   "parent_id": null,
+   "product_count": 7
+  },
+  {
+   "id": "01a2083e-6fce-7469-acc9-cff27f5cec9b",
+   "slug": "ready-to-eat",
+   "name": "Ready-to-eat meals",
+   "name_hi": "तैयार भोजन",
+   "parent_id": null,
+   "product_count": 6
+  },
+  {
+   "id": "01a2083e-6fce-7928-8e7d-1af72aa9377d",
+   "slug": "sauces-spreads",
+   "name": "Sauces, ketchups & spreads",
+   "name_hi": "सॉस और स्प्रेड",
+   "parent_id": null,
+   "product_count": 6
+  }
+ ],
+ "next_cursor": null
+}

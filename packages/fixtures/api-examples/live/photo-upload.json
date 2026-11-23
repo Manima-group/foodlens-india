@@ -1,0 +1,9 @@
+{
+ "photo_id": "01a208bd-cabe-7f67-ae2d-c434c703f1d2",
+ "upload_url": "http://10.0.2.2:8000/api/v1/uploads/0LaeCa4q6HsS-0h4YUWIRB05aITwllpGr91D0jFWUqU",
+ "upload_method": "PUT",
+ "upload_headers": {
+  "Content-Type": "image/jpeg"
+ },
+ "expires_at": "2026-11-23T14:24:45.661359Z"
+}

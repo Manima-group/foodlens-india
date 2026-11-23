@@ -1,0 +1,152 @@
+{
+ "items": [
+  {
+   "id": "01a2083e-7012-7ae5-a9e1-203eb0203e3a",
+   "gtin14": "02900000000063",
+   "name": "Cornflakes Chivda (Synthetic)",
+   "brand": {
+    "id": "01a2083e-6fd3-7af2-a730-c0cb8670a7ab",
+    "name": "Mock Beverages (Synthetic)",
+    "is_verified": false
+   },
+   "category": {
+    "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+    "slug": "namkeen-savoury-snacks",
+    "name": "Namkeen & savoury snacks"
+   },
+   "variant": {
+    "net_quantity": 400.0,
+    "unit": "g",
+    "pack_format": "pouch"
+   },
+   "analysis_status": "methodology_pending",
+   "data_freshness": "fresh",
+   "headline_indicators": [
+    {
+     "nutrient": "fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "level": "low",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    }
+   ]
+  },
+  {
+   "id": "01a2083e-7000-7706-9a62-1b9a5f94ba92",
+   "gtin14": "02900000000049",
+   "name": "Khatta Meetha Mix (Synthetic)",
+   "brand": {
+    "id": "01a2083e-6fd3-7919-9b89-e848f2e2e743",
+    "name": "Placeholder Bakers (Synthetic)",
+    "is_verified": false
+   },
+   "category": {
+    "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+    "slug": "namkeen-savoury-snacks",
+    "name": "Namkeen & savoury snacks"
+   },
+   "variant": {
+    "net_quantity": 150.0,
+    "unit": "g",
+    "pack_format": "pouch"
+   },
+   "analysis_status": "unverified_provisional",
+   "data_freshness": "fresh",
+   "headline_indicators": [
+    {
+     "nutrient": "fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "level": "low",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    }
+   ]
+  },
+  {
+   "id": "01a2083e-6ff6-74ca-bcb4-4659f9fc2d64",
+   "gtin14": "02900000000032",
+   "name": "Moong Dal Crunch (Synthetic)",
+   "brand": {
+    "id": "01a2083e-6fd3-79a0-b6d4-d16cda314e47",
+    "name": "Example Dairy (Synthetic)",
+    "is_verified": false
+   },
+   "category": {
+    "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+    "slug": "namkeen-savoury-snacks",
+    "name": "Namkeen & savoury snacks"
+   },
+   "variant": {
+    "net_quantity": 400.0,
+    "unit": "g",
+    "pack_format": "pouch"
+   },
+   "analysis_status": "methodology_pending",
+   "data_freshness": "fresh",
+   "headline_indicators": [
+    {
+     "nutrient": "fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "level": "low",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "level": "high",
+     "is_placeholder_threshold": true,
+     "basis": "per_100g"
+    }
+   ]
+  }
+ ],
+ "sponsored": [],
+ "suppressed_reason": null,
+ "message": null,
+ "ranking_basis": "Same category and pack type, ranked by fewer high nutrient indicators, then data completeness, then name."
+}

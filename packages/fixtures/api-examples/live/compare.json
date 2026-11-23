@@ -1,0 +1,183 @@
+{
+ "items": [
+  {
+   "product": {
+    "id": "01a2083e-6fec-79ce-990b-def03613d745",
+    "gtin14": "02900000000025",
+    "name": "Aloo Bhujia (Synthetic)",
+    "brand": {
+     "id": "01a2083e-6fd3-7182-bcc9-11b944e7f6a5",
+     "name": "Sample Foods Pvt (Synthetic)",
+     "is_verified": false
+    },
+    "category": {
+     "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+     "slug": "namkeen-savoury-snacks",
+     "name": "Namkeen & savoury snacks"
+    },
+    "variant": {
+     "net_quantity": 200.0,
+     "unit": "g",
+     "pack_format": "pouch"
+    },
+    "analysis_status": "insufficient_data",
+    "data_freshness": "fresh",
+    "headline_indicators": [
+     {
+      "nutrient": "fat_g",
+      "level": "high",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     },
+     {
+      "nutrient": "saturated_fat_g",
+      "level": "high",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     },
+     {
+      "nutrient": "sugars_g",
+      "level": "low",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     }
+    ]
+   },
+   "basis": "per_100g",
+   "per_100": [
+    {
+     "nutrient": "energy_kcal",
+     "value": 521.7,
+     "unit": "kcal"
+    },
+    {
+     "nutrient": "fat_g",
+     "value": 36.1,
+     "unit": "g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "value": 11.7,
+     "unit": "g"
+    },
+    {
+     "nutrient": "carbohydrate_g",
+     "value": 40.6,
+     "unit": "g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "value": 3.6,
+     "unit": "g"
+    },
+    {
+     "nutrient": "protein_g",
+     "value": 8.6,
+     "unit": "g"
+    }
+   ],
+   "missing_fields": [
+    "sodium_mg"
+   ]
+  },
+  {
+   "product": {
+    "id": "01a2083e-7012-7ae5-a9e1-203eb0203e3a",
+    "gtin14": "02900000000063",
+    "name": "Cornflakes Chivda (Synthetic)",
+    "brand": {
+     "id": "01a2083e-6fd3-7af2-a730-c0cb8670a7ab",
+     "name": "Mock Beverages (Synthetic)",
+     "is_verified": false
+    },
+    "category": {
+     "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+     "slug": "namkeen-savoury-snacks",
+     "name": "Namkeen & savoury snacks"
+    },
+    "variant": {
+     "net_quantity": 400.0,
+     "unit": "g",
+     "pack_format": "pouch"
+    },
+    "analysis_status": "methodology_pending",
+    "data_freshness": "fresh",
+    "headline_indicators": [
+     {
+      "nutrient": "fat_g",
+      "level": "high",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     },
+     {
+      "nutrient": "saturated_fat_g",
+      "level": "high",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     },
+     {
+      "nutrient": "sugars_g",
+      "level": "low",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     },
+     {
+      "nutrient": "sodium_mg",
+      "level": "high",
+      "is_placeholder_threshold": true,
+      "basis": "per_100g"
+     }
+    ]
+   },
+   "basis": "per_100g",
+   "per_100": [
+    {
+     "nutrient": "energy_kcal",
+     "value": 519.9,
+     "unit": "kcal"
+    },
+    {
+     "nutrient": "fat_g",
+     "value": 30.3,
+     "unit": "g"
+    },
+    {
+     "nutrient": "saturated_fat_g",
+     "value": 11.6,
+     "unit": "g"
+    },
+    {
+     "nutrient": "carbohydrate_g",
+     "value": 50.4,
+     "unit": "g"
+    },
+    {
+     "nutrient": "sugars_g",
+     "value": 3.6,
+     "unit": "g"
+    },
+    {
+     "nutrient": "protein_g",
+     "value": 11.4,
+     "unit": "g"
+    },
+    {
+     "nutrient": "sodium_mg",
+     "value": 934.0,
+     "unit": "mg"
+    }
+   ],
+   "missing_fields": []
+  }
+ ],
+ "nutrients": [
+  "energy_kcal",
+  "fat_g",
+  "saturated_fat_g",
+  "carbohydrate_g",
+  "sugars_g",
+  "protein_g",
+  "sodium_mg"
+ ],
+ "note": "Values are per 100 g/ml as declared on each label. Missing values are shown as not declared, never as 0."
+}

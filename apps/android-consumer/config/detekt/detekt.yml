@@ -10,3 +10,9 @@ style:
     ignorePropertyDeclaration: true
     ignoreCompanionObjectPropertyDeclaration: true
     excludes: ['**/test/**', '**/androidTest/**']
+  # ktlint (max_line_length = 120 in .editorconfig) owns line length; detekt's copy double-reports.
+  MaxLineLength:
+    active: false
+  # Early-return guard clauses (cancellation/offline/304) read better than nesting.
+  ReturnCount:
+    max: 3

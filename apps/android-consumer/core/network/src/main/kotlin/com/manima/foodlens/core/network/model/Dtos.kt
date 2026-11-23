@@ -65,7 +65,7 @@ data class ProductDto(
     val variant: VariantDto? = null,
     val category: CategoryDto? = null,
     val images: List<ImageDto> = emptyList(),
-    @SerialName("label_version") val labelVersion: LabelVersionDto,
+    @SerialName("label_version") val labelVersion: LabelVersionDto? = null,
     @SerialName("data_freshness") val dataFreshness: DataFreshness,
     val completeness: CompletenessDto,
     val badges: List<String> = emptyList()

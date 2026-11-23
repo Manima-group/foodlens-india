@@ -1,0 +1,243 @@
+{
+ "product": {
+  "id": "01a2083e-6fec-79ce-990b-def03613d745",
+  "gtin14": "02900000000025",
+  "original_code": "2900000000025",
+  "name": "Aloo Bhujia (Synthetic)",
+  "brand": {
+   "id": "01a2083e-6fd3-7182-bcc9-11b944e7f6a5",
+   "name": "Sample Foods Pvt (Synthetic)",
+   "is_verified": false
+  },
+  "variant": {
+   "net_quantity": 200.0,
+   "unit": "g",
+   "pack_format": "pouch"
+  },
+  "category": {
+   "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+   "slug": "namkeen-savoury-snacks",
+   "name": "Namkeen & savoury snacks"
+  },
+  "images": [],
+  "label_version": {
+   "id": "01a2083e-6ff0-7e68-a639-66d9cac8f412",
+   "observed_at": "2026-10-18T11:50:39.316596Z",
+   "evidence_level": "reviewer_verified"
+  },
+  "data_freshness": "fresh",
+  "completeness": {
+   "nutrition": false,
+   "ingredients": true,
+   "allergens": true,
+   "missing_fields": [
+    "sodium_mg"
+   ]
+  },
+  "badges": [
+   "label_declared_veg"
+  ]
+ },
+ "analysis_summary": {
+  "analysis_status": "insufficient_data",
+  "score_value": null,
+  "confidence": null,
+  "rule_version": "nutr-ind-0.1-placeholder",
+  "headline_indicators": [
+   {
+    "nutrient": "fat_g",
+    "level": "high",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "level": "high",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   },
+   {
+    "nutrient": "sugars_g",
+    "level": "low",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   }
+  ]
+ },
+ "sponsored": [],
+ "nutrition": {
+  "declared_basis": "per_100g",
+  "basis": "per_100g",
+  "per_100": [
+   {
+    "nutrient": "energy_kcal",
+    "value": 521.7,
+    "unit": "kcal"
+   },
+   {
+    "nutrient": "fat_g",
+    "value": 36.1,
+    "unit": "g"
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "value": 11.7,
+    "unit": "g"
+   },
+   {
+    "nutrient": "carbohydrate_g",
+    "value": 40.6,
+    "unit": "g"
+   },
+   {
+    "nutrient": "sugars_g",
+    "value": 3.6,
+    "unit": "g"
+   },
+   {
+    "nutrient": "protein_g",
+    "value": 8.6,
+    "unit": "g"
+   }
+  ],
+  "per_serving": [
+   {
+    "nutrient": "energy_kcal",
+    "value": 156.51,
+    "unit": "kcal"
+   },
+   {
+    "nutrient": "fat_g",
+    "value": 10.83,
+    "unit": "g"
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "value": 3.51,
+    "unit": "g"
+   },
+   {
+    "nutrient": "carbohydrate_g",
+    "value": 12.18,
+    "unit": "g"
+   },
+   {
+    "nutrient": "sugars_g",
+    "value": 1.08,
+    "unit": "g"
+   },
+   {
+    "nutrient": "protein_g",
+    "value": 2.58,
+    "unit": "g"
+   }
+  ],
+  "serving": {
+   "size": 30.0,
+   "unit": "g",
+   "servings_per_pack": 6.7
+  },
+  "indicators": [
+   {
+    "nutrient": "fat_g",
+    "level": "high",
+    "value": 36.1,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "level": "high",
+    "value": 11.7,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   },
+   {
+    "nutrient": "sugars_g",
+    "level": "low",
+    "value": 3.6,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   }
+  ],
+  "thresholds_are_placeholder": true,
+  "warnings": [],
+  "evidence_level": "reviewer_verified"
+ },
+ "ingredients": {
+  "is_complete": true,
+  "items": [
+   {
+    "position": 0,
+    "raw_text": "Gram flour (besan)",
+    "ingredient_id": "01a2083e-6faf-7b2e-a425-f8f9bb60e996",
+    "ingredient_name": "Gram flour (besan)",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   },
+   {
+    "position": 1,
+    "raw_text": "Palmolein oil",
+    "ingredient_id": "01a2083e-6fad-7445-a002-1cd477906ec8",
+    "ingredient_name": "Palmolein oil",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   },
+   {
+    "position": 2,
+    "raw_text": "Peanuts",
+    "ingredient_id": "01a2083e-6fb1-7a3a-bedb-f95126df1bf5",
+    "ingredient_name": "Peanuts",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   },
+   {
+    "position": 3,
+    "raw_text": "Lentils",
+    "ingredient_id": "01a2083e-6fb9-727e-883c-df001835fccd",
+    "ingredient_name": "Lentils",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   }
+  ],
+  "processing": {
+   "ingredient_count": 4,
+   "additive_count": 0
+  },
+  "processing_reason": null,
+  "evidence_level": "reviewer_verified"
+ },
+ "allergens": [
+  {
+   "code": "cereals_gluten",
+   "name": "Cereals containing gluten",
+   "name_hi": "ग्लूटेन युक्त अनाज",
+   "kind": "may_contain",
+   "source": "label_declared",
+   "evidence_level": "reviewer_verified"
+  },
+  {
+   "code": "peanut",
+   "name": "Peanut",
+   "name_hi": "मूंगफली",
+   "kind": "contains",
+   "source": "label_declared",
+   "evidence_level": "reviewer_verified"
+  }
+ ],
+ "dietary_declarations": [
+  "veg_mark"
+ ],
+ "lab_information": {
+  "status": "none",
+  "message": "No verified laboratory information available"
+ },
+ "limitations": [
+  "Not enough data to score: the label does not declare sodium_mg.",
+  "Indicative thresholds — pending expert review."
+ ]
+}

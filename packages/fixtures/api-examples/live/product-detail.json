@@ -1,0 +1,261 @@
+{
+ "product": {
+  "id": "01a2083e-6fd5-7fbb-8671-42cefbc0eba2",
+  "gtin14": "08901234567890",
+  "original_code": "8901234567890",
+  "name": "Masala Crunch Namkeen (Synthetic)",
+  "brand": {
+   "id": "01a2083e-6fd3-7fd8-a1fb-3bba610c475d",
+   "name": "Demo Snacks Co",
+   "is_verified": false
+  },
+  "variant": {
+   "net_quantity": 150.0,
+   "unit": "g",
+   "pack_format": "pouch"
+  },
+  "category": {
+   "id": "01a2083e-6fce-7a5a-991f-a6fc2359dc43",
+   "slug": "namkeen-savoury-snacks",
+   "name": "Namkeen & savoury snacks"
+  },
+  "images": [],
+  "label_version": {
+   "id": "01a2083e-6fde-7a37-829d-a8be2febb39a",
+   "observed_at": "2026-10-21T11:50:39.316596Z",
+   "evidence_level": "reviewer_verified"
+  },
+  "data_freshness": "fresh",
+  "completeness": {
+   "nutrition": true,
+   "ingredients": false,
+   "allergens": true,
+   "missing_fields": []
+  },
+  "badges": [
+   "label_declared_veg"
+  ]
+ },
+ "analysis_summary": {
+  "analysis_status": "methodology_pending",
+  "score_value": null,
+  "confidence": null,
+  "rule_version": "nutr-ind-0.1-placeholder",
+  "headline_indicators": [
+   {
+    "nutrient": "fat_g",
+    "level": "high",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "level": "high",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   },
+   {
+    "nutrient": "sugars_g",
+    "level": "low",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   },
+   {
+    "nutrient": "sodium_mg",
+    "level": "high",
+    "is_placeholder_threshold": true,
+    "basis": "per_100g"
+   }
+  ]
+ },
+ "sponsored": [],
+ "nutrition": {
+  "declared_basis": "per_100g",
+  "basis": "per_100g",
+  "per_100": [
+   {
+    "nutrient": "energy_kcal",
+    "value": 512.0,
+    "unit": "kcal"
+   },
+   {
+    "nutrient": "fat_g",
+    "value": 30.0,
+    "unit": "g"
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "value": 12.0,
+    "unit": "g"
+   },
+   {
+    "nutrient": "carbohydrate_g",
+    "value": 52.0,
+    "unit": "g"
+   },
+   {
+    "nutrient": "sugars_g",
+    "value": 4.0,
+    "unit": "g"
+   },
+   {
+    "nutrient": "protein_g",
+    "value": 8.0,
+    "unit": "g"
+   },
+   {
+    "nutrient": "sodium_mg",
+    "value": 820.0,
+    "unit": "mg"
+   }
+  ],
+  "per_serving": [
+   {
+    "nutrient": "energy_kcal",
+    "value": 153.6,
+    "unit": "kcal"
+   },
+   {
+    "nutrient": "fat_g",
+    "value": 9.0,
+    "unit": "g"
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "value": 3.6,
+    "unit": "g"
+   },
+   {
+    "nutrient": "carbohydrate_g",
+    "value": 15.6,
+    "unit": "g"
+   },
+   {
+    "nutrient": "sugars_g",
+    "value": 1.2,
+    "unit": "g"
+   },
+   {
+    "nutrient": "protein_g",
+    "value": 2.4,
+    "unit": "g"
+   },
+   {
+    "nutrient": "sodium_mg",
+    "value": 246.0,
+    "unit": "mg"
+   }
+  ],
+  "serving": {
+   "size": 30.0,
+   "unit": "g",
+   "servings_per_pack": 5.0
+  },
+  "indicators": [
+   {
+    "nutrient": "fat_g",
+    "level": "high",
+    "value": 30.0,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   },
+   {
+    "nutrient": "saturated_fat_g",
+    "level": "high",
+    "value": 12.0,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   },
+   {
+    "nutrient": "sugars_g",
+    "level": "low",
+    "value": 4.0,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   },
+   {
+    "nutrient": "sodium_mg",
+    "level": "high",
+    "value": 820.0,
+    "basis": "per_100g",
+    "is_placeholder_threshold": true
+   }
+  ],
+  "thresholds_are_placeholder": true,
+  "warnings": [],
+  "evidence_level": "reviewer_verified"
+ },
+ "ingredients": {
+  "is_complete": false,
+  "items": [
+   {
+    "position": 0,
+    "raw_text": "Gram flour (besan)",
+    "ingredient_id": "01a2083e-6faf-7b2e-a425-f8f9bb60e996",
+    "ingredient_name": "Gram flour (besan)",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   },
+   {
+    "position": 1,
+    "raw_text": "Palmolein oil",
+    "ingredient_id": "01a2083e-6fad-7445-a002-1cd477906ec8",
+    "ingredient_name": "Palmolein oil",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   },
+   {
+    "position": 2,
+    "raw_text": "Peanuts",
+    "ingredient_id": "01a2083e-6fb1-7a3a-bedb-f95126df1bf5",
+    "ingredient_name": "Peanuts",
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 1.0
+   },
+   {
+    "position": 3,
+    "raw_text": "Natural flavouring substances",
+    "ingredient_id": null,
+    "ingredient_name": null,
+    "is_additive": false,
+    "ins_code": null,
+    "match_confidence": 0.0
+   }
+  ],
+  "processing": null,
+  "processing_reason": "ingredients_incomplete",
+  "evidence_level": "reviewer_verified"
+ },
+ "allergens": [
+  {
+   "code": "cereals_gluten",
+   "name": "Cereals containing gluten",
+   "name_hi": "ग्लूटेन युक्त अनाज",
+   "kind": "may_contain",
+   "source": "label_declared",
+   "evidence_level": "reviewer_verified"
+  },
+  {
+   "code": "peanut",
+   "name": "Peanut",
+   "name_hi": "मूंगफली",
+   "kind": "contains",
+   "source": "label_declared",
+   "evidence_level": "reviewer_verified"
+  }
+ ],
+ "dietary_declarations": [
+  "veg_mark"
+ ],
+ "lab_information": {
+  "status": "none",
+  "message": "No verified laboratory information available"
+ },
+ "limitations": [
+  "No public score: the scoring methodology is pending expert review.",
+  "Indicative thresholds — pending expert review."
+ ]
+}
