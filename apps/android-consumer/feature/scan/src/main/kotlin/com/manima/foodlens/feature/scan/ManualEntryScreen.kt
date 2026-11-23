@@ -25,9 +25,14 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.manima.foodlens.core.model.Symbology
+import com.manima.foodlens.core.ui.AaharTopBar
 
 @Composable
-fun ManualEntryRoute(onLookup: (gtin14: String) -> Unit, viewModel: ManualEntryViewModel = hiltViewModel()) {
+fun ManualEntryRoute(
+    onLookup: (gtin14: String) -> Unit,
+    onBack: (() -> Unit)? = null,
+    viewModel: ManualEntryViewModel = hiltViewModel()
+) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
@@ -36,12 +41,15 @@ fun ManualEntryRoute(onLookup: (gtin14: String) -> Unit, viewModel: ManualEntryV
             }
         }
     }
-    ManualEntryScreen(
-        state = state,
-        onCodeChanged = viewModel::onCodeChanged,
-        onSubmit = viewModel::onSubmit,
-        onCandidateChosen = viewModel::onCandidateChosen
-    )
+    Column(Modifier.fillMaxSize()) {
+        AaharTopBar(title = "", onBack = onBack)
+        ManualEntryScreen(
+            state = state,
+            onCodeChanged = viewModel::onCodeChanged,
+            onSubmit = viewModel::onSubmit,
+            onCandidateChosen = viewModel::onCandidateChosen
+        )
+    }
 }
 
 @Composable

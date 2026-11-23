@@ -1,7 +1,5 @@
 plugins {
-    id("foodlens.android.library")
-    id("foodlens.android.compose")
-    id("foodlens.hilt")
+    id("foodlens.android.feature")
 }
 
 android {
@@ -9,11 +7,12 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:model"))
     implementation(project(":core:gtin"))
-    implementation(project(":core:designsystem"))
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.lifecycle.runtime.compose)
-    implementation(libs.hilt.navigation.compose)
-    testImplementation(libs.androidx.test.ext.junit)
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
+    // Bundled model: works offline from first launch and without Play services (SPEC §10.4).
+    implementation(libs.mlkit.barcode)
+    implementation(libs.androidx.activity.compose)
 }
