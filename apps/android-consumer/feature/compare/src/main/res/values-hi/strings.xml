@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="compare_title">उत्पादों की तुलना</string>
+    <string name="compare_need_more_title">कम से कम दो उत्पाद चुनें</string>
+    <string name="compare_need_more_body">अपने पसंदीदा से या किसी उत्पाद के विकल्पों से 2 से 4 उत्पाद चुनें।</string>
+    <string name="compare_not_declared">घोषित नहीं</string>
+    <string name="compare_per_100g">प्रति 100 ग्राम</string>
+    <string name="compare_per_100ml">प्रति 100 मि.ली.</string>
+    <string name="compare_footer">मान वही हैं जो हर लेबल पर घोषित हैं। AAHAR इन उत्पादों को रैंक नहीं करता और ब्रांड इस दृश्य को बदलवाने के लिए भुगतान नहीं कर सकते।</string>
+</resources>

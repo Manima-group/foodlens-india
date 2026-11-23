@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_recent">Recent scans</string>
+    <string name="library_favorites">Favourites</string>
+    <string name="library_recent_empty_title">No scans yet</string>
+    <string name="library_recent_empty_body">Products you scan or open appear here, even when you\'re offline.</string>
+    <string name="library_scan">Scan a barcode</string>
+    <string name="library_unknown_name">Product</string>
+    <string name="library_not_found">Not in AAHAR yet</string>
+    <string name="library_clear_history">Clear history</string>
+    <string name="library_clear_title">Clear scan history?</string>
+    <string name="library_clear_body">This removes your recent scans from this phone. Favourites are kept.</string>
+    <string name="library_clear_confirm">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="library_local_note">Your history is stored only on this phone.</string>
+    <string name="library_favorites_empty_title">No favourites yet</string>
+    <string name="library_favorites_empty_body">Tap the heart on a product to save it here.</string>
+    <string name="library_compare_hint">Tick 2 to 4 products to compare them side by side.</string>
+    <string name="library_compare_selected">Compare selected (%1$d)</string>
+    <string name="library_remove_favorite">Remove %1$s from favourites</string>
+</resources>

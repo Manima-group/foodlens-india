@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="compare_title">Compare products</string>
+    <string name="compare_need_more_title">Pick at least two products</string>
+    <string name="compare_need_more_body">Choose 2 to 4 products from your favourites or from a product\'s alternatives.</string>
+    <string name="compare_not_declared">Not declared</string>
+    <string name="compare_per_100g">per 100 g</string>
+    <string name="compare_per_100ml">per 100 ml</string>
+    <string name="compare_footer">Values are as declared on each label. AAHAR does not rank these products and brands cannot pay to change this view.</string>
+</resources>
