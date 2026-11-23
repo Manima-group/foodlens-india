@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_channel_lookups">Offline scans</string>
+    <string name="notification_lookups_title">Your offline scans are ready</string>
+    <plurals name="notification_lookups_text">
+        <item quantity="one">%d product you scanned offline is now available.</item>
+        <item quantity="other">%d products you scanned offline are now available.</item>
+    </plurals>
+</resources>

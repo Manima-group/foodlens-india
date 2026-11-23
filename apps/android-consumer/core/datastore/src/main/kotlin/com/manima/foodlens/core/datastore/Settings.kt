@@ -19,6 +19,8 @@ data class UserSettings(
     val analyticsConsent: Boolean = false,
     /** Allergens the user wants highlighted. Matched against label declarations only (T7). */
     val allergenPrefs: Set<String> = emptySet(),
+    /** Local notification when barcodes scanned offline are resolved (SPEC §10.5). Off by default. */
+    val notifyLookups: Boolean = false,
     /** Debug builds only: lets a physical phone reach the API on a LAN IP. */
     val apiBaseUrlOverride: String? = null
 )
@@ -31,6 +33,7 @@ class SettingsStore(private val store: DataStore<Preferences>) {
             onboardingDone = p[ONBOARDING] ?: false,
             analyticsConsent = p[CONSENT] ?: false,
             allergenPrefs = p[ALLERGENS] ?: emptySet(),
+            notifyLookups = p[NOTIFY] ?: false,
             apiBaseUrlOverride = p[BASE_URL]?.takeIf { it.isNotBlank() }
         )
     }
@@ -40,6 +43,8 @@ class SettingsStore(private val store: DataStore<Preferences>) {
     suspend fun setOnboardingDone(done: Boolean) = store.edit { it[ONBOARDING] = done }
 
     suspend fun setAnalyticsConsent(consent: Boolean) = store.edit { it[CONSENT] = consent }
+
+    suspend fun setNotifyLookups(enabled: Boolean) = store.edit { it[NOTIFY] = enabled }
 
     suspend fun setAllergenPrefs(codes: Set<String>) = store.edit { it[ALLERGENS] = codes }
 
@@ -70,6 +75,7 @@ class SettingsStore(private val store: DataStore<Preferences>) {
         val ONBOARDING = booleanPreferencesKey("onboarding_done")
         val CONSENT = booleanPreferencesKey("analytics_consent")
         val ALLERGENS = stringSetPreferencesKey("allergen_prefs")
+        val NOTIFY = booleanPreferencesKey("notify_lookups")
         val BASE_URL = stringPreferencesKey("api_base_url_override")
         val INSTALL_ID = stringPreferencesKey("install_id")
         val INSTALL_ID_CREATED = stringPreferencesKey("install_id_created")

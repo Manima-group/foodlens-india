@@ -31,6 +31,9 @@ interface ProductDao {
     )
     suspend fun trimTo(limit: Int)
 
+    @Query("DELETE FROM cached_products WHERE gtin14 = :gtin14")
+    suspend fun delete(gtin14: String)
+
     @Query("SELECT COUNT(*) FROM cached_products")
     suspend fun count(): Int
 
