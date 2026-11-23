@@ -3,6 +3,14 @@ naming:
   FunctionNaming:
     ignoreAnnotated: ['Composable', 'Test', 'ParameterizedTest']
 complexity:
+  # Compose UI functions are declarative layout trees; length/branching is reviewed, not counted.
+  LongMethod:
+    ignoreAnnotated: ['Composable']
+  CyclomaticComplexMethod:
+    ignoreAnnotated: ['Composable']
+    ignoreSimpleWhenEntries: true
+  TooManyFunctions:
+    ignorePrivate: true
   LongParameterList:
     ignoreAnnotated: ['Composable']
     # Hilt-injected constructors list their collaborators explicitly.
