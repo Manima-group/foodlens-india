@@ -4,3 +4,5 @@
 node_modules/
 __pycache__/
 .venv/
+tests/.uploads/
+var/

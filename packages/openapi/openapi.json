@@ -1,0 +1,2758 @@
+{
+ "components": {
+  "schemas": {
+   "AllergenDeclarationOut": {
+    "properties": {
+     "code": {
+      "title": "Code",
+      "type": "string"
+     },
+     "evidence_level": {
+      "title": "Evidence Level",
+      "type": "string"
+     },
+     "kind": {
+      "enum": [
+       "contains",
+       "may_contain"
+      ],
+      "title": "Kind",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "name_hi": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Name Hi"
+     },
+     "source": {
+      "title": "Source",
+      "type": "string"
+     }
+    },
+    "required": [
+     "code",
+     "name",
+     "name_hi",
+     "kind",
+     "source",
+     "evidence_level"
+    ],
+    "title": "AllergenDeclarationOut",
+    "type": "object"
+   },
+   "AlternativesOut": {
+    "properties": {
+     "items": {
+      "items": {
+       "$ref": "#/components/schemas/ProductSummaryOut"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "message": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Message"
+     },
+     "ranking_basis": {
+      "title": "Ranking Basis",
+      "type": "string"
+     },
+     "sponsored": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Sponsored",
+      "type": "array"
+     },
+     "suppressed_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Suppressed Reason"
+     }
+    },
+    "required": [
+     "items",
+     "suppressed_reason",
+     "message",
+     "ranking_basis"
+    ],
+    "title": "AlternativesOut",
+    "type": "object"
+   },
+   "AnalysisExplainOut": {
+    "description": "SPEC \u00a78.6.",
+    "properties": {
+     "analysis_status": {
+      "title": "Analysis Status",
+      "type": "string"
+     },
+     "factors": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Factors",
+      "type": "array"
+     },
+     "inputs": {
+      "items": {
+       "$ref": "#/components/schemas/ExplainInputOut"
+      },
+      "title": "Inputs",
+      "type": "array"
+     },
+     "limitations": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+     },
+     "methodology": {
+      "$ref": "#/components/schemas/MethodologyOut"
+     },
+     "missing_fields": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+     },
+     "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+     },
+     "score_value": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Score Value"
+     }
+    },
+    "required": [
+     "analysis_status",
+     "score_value",
+     "methodology",
+     "rule_version",
+     "inputs",
+     "missing_fields",
+     "factors",
+     "limitations"
+    ],
+    "title": "AnalysisExplainOut",
+    "type": "object"
+   },
+   "AnalysisSummaryOut": {
+    "properties": {
+     "analysis_status": {
+      "title": "Analysis Status",
+      "type": "string"
+     },
+     "confidence": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Confidence"
+     },
+     "headline_indicators": {
+      "items": {
+       "$ref": "#/components/schemas/HeadlineIndicatorOut"
+      },
+      "title": "Headline Indicators",
+      "type": "array"
+     },
+     "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+     },
+     "score_value": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Score Value"
+     }
+    },
+    "required": [
+     "analysis_status",
+     "score_value",
+     "confidence",
+     "rule_version",
+     "headline_indicators"
+    ],
+    "title": "AnalysisSummaryOut",
+    "type": "object"
+   },
+   "BrandOut": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "is_verified": {
+      "title": "Is Verified",
+      "type": "boolean"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "name",
+     "is_verified"
+    ],
+    "title": "BrandOut",
+    "type": "object"
+   },
+   "CategoryNodeOut": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "name_hi": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Name Hi"
+     },
+     "parent_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Parent Id"
+     },
+     "product_count": {
+      "title": "Product Count",
+      "type": "integer"
+     },
+     "slug": {
+      "title": "Slug",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "slug",
+     "name",
+     "name_hi",
+     "parent_id",
+     "product_count"
+    ],
+    "title": "CategoryNodeOut",
+    "type": "object"
+   },
+   "CategoryOut": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "slug": {
+      "title": "Slug",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "slug",
+     "name"
+    ],
+    "title": "CategoryOut",
+    "type": "object"
+   },
+   "CompareItemOut": {
+    "properties": {
+     "basis": {
+      "title": "Basis",
+      "type": "string"
+     },
+     "missing_fields": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+     },
+     "per_100": {
+      "items": {
+       "$ref": "#/components/schemas/NutrientValueOut"
+      },
+      "title": "Per 100",
+      "type": "array"
+     },
+     "product": {
+      "$ref": "#/components/schemas/ProductSummaryOut"
+     }
+    },
+    "required": [
+     "product",
+     "basis",
+     "per_100",
+     "missing_fields"
+    ],
+    "title": "CompareItemOut",
+    "type": "object"
+   },
+   "CompareOut": {
+    "properties": {
+     "items": {
+      "items": {
+       "$ref": "#/components/schemas/CompareItemOut"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "note": {
+      "title": "Note",
+      "type": "string"
+     },
+     "nutrients": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Nutrients",
+      "type": "array"
+     }
+    },
+    "required": [
+     "items",
+     "nutrients",
+     "note"
+    ],
+    "title": "CompareOut",
+    "type": "object"
+   },
+   "CompletenessOut": {
+    "properties": {
+     "allergens": {
+      "title": "Allergens",
+      "type": "boolean"
+     },
+     "ingredients": {
+      "title": "Ingredients",
+      "type": "boolean"
+     },
+     "missing_fields": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+     },
+     "nutrition": {
+      "title": "Nutrition",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "nutrition",
+     "ingredients",
+     "allergens",
+     "missing_fields"
+    ],
+    "title": "CompletenessOut",
+    "type": "object"
+   },
+   "ContributionIn": {
+    "properties": {
+     "brand_name": {
+      "anyOf": [
+       {
+        "maxLength": 200,
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Brand Name"
+     },
+     "gtin14": {
+      "maxLength": 14,
+      "minLength": 8,
+      "title": "Gtin14",
+      "type": "string"
+     },
+     "notes": {
+      "anyOf": [
+       {
+        "maxLength": 2000,
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Notes"
+     },
+     "product_name": {
+      "anyOf": [
+       {
+        "maxLength": 300,
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Product Name"
+     }
+    },
+    "required": [
+     "gtin14"
+    ],
+    "title": "ContributionIn",
+    "type": "object"
+   },
+   "ContributionOut": {
+    "properties": {
+     "brand_name": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Brand Name"
+     },
+     "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+     },
+     "gtin14": {
+      "title": "Gtin14",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "photos": {
+      "items": {
+       "$ref": "#/components/schemas/PhotoOut"
+      },
+      "title": "Photos",
+      "type": "array"
+     },
+     "product_name": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Product Name"
+     },
+     "state": {
+      "title": "State",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "gtin14",
+     "product_name",
+     "brand_name",
+     "state",
+     "photos",
+     "created_at"
+    ],
+    "title": "ContributionOut",
+    "type": "object"
+   },
+   "ExplainInputOut": {
+    "properties": {
+     "basis": {
+      "title": "Basis",
+      "type": "string"
+     },
+     "field": {
+      "title": "Field",
+      "type": "string"
+     },
+     "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+     },
+     "source": {
+      "title": "Source",
+      "type": "string"
+     },
+     "value": {
+      "title": "Value",
+      "type": "number"
+     }
+    },
+    "required": [
+     "field",
+     "value",
+     "basis",
+     "source",
+     "observed_at"
+    ],
+    "title": "ExplainInputOut",
+    "type": "object"
+   },
+   "GuestRegisterIn": {
+    "properties": {
+     "install_id": {
+      "maxLength": 128,
+      "minLength": 16,
+      "pattern": "^[A-Za-z0-9\\-_]+$",
+      "title": "Install Id",
+      "type": "string"
+     }
+    },
+    "required": [
+     "install_id"
+    ],
+    "title": "GuestRegisterIn",
+    "type": "object"
+   },
+   "GuestRegisterOut": {
+    "properties": {
+     "expires_at": {
+      "format": "date-time",
+      "title": "Expires At",
+      "type": "string"
+     },
+     "guest_token": {
+      "title": "Guest Token",
+      "type": "string"
+     },
+     "scopes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Scopes",
+      "type": "array"
+     },
+     "token_type": {
+      "default": "Bearer",
+      "title": "Token Type",
+      "type": "string"
+     }
+    },
+    "required": [
+     "guest_token",
+     "expires_at",
+     "scopes"
+    ],
+    "title": "GuestRegisterOut",
+    "type": "object"
+   },
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "title": "Detail",
+      "type": "array"
+     }
+    },
+    "title": "HTTPValidationError",
+    "type": "object"
+   },
+   "HeadlineIndicatorOut": {
+    "properties": {
+     "basis": {
+      "title": "Basis",
+      "type": "string"
+     },
+     "is_placeholder_threshold": {
+      "title": "Is Placeholder Threshold",
+      "type": "boolean"
+     },
+     "level": {
+      "enum": [
+       "low",
+       "medium",
+       "high"
+      ],
+      "title": "Level",
+      "type": "string"
+     },
+     "nutrient": {
+      "title": "Nutrient",
+      "type": "string"
+     }
+    },
+    "required": [
+     "nutrient",
+     "level",
+     "is_placeholder_threshold",
+     "basis"
+    ],
+    "title": "HeadlineIndicatorOut",
+    "type": "object"
+   },
+   "ImageOut": {
+    "properties": {
+     "attribution": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Attribution"
+     },
+     "kind": {
+      "title": "Kind",
+      "type": "string"
+     },
+     "licence": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Licence"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "kind",
+     "url",
+     "licence",
+     "attribution"
+    ],
+    "title": "ImageOut",
+    "type": "object"
+   },
+   "IndicatorOut": {
+    "properties": {
+     "basis": {
+      "title": "Basis",
+      "type": "string"
+     },
+     "is_placeholder_threshold": {
+      "title": "Is Placeholder Threshold",
+      "type": "boolean"
+     },
+     "level": {
+      "enum": [
+       "low",
+       "medium",
+       "high"
+      ],
+      "title": "Level",
+      "type": "string"
+     },
+     "nutrient": {
+      "title": "Nutrient",
+      "type": "string"
+     },
+     "value": {
+      "title": "Value",
+      "type": "number"
+     }
+    },
+    "required": [
+     "nutrient",
+     "level",
+     "value",
+     "basis",
+     "is_placeholder_threshold"
+    ],
+    "title": "IndicatorOut",
+    "type": "object"
+   },
+   "IngredientCardOut": {
+    "properties": {
+     "aliases": {
+      "items": {
+       "additionalProperties": {
+        "type": "string"
+       },
+       "type": "object"
+      },
+      "title": "Aliases",
+      "type": "array"
+     },
+     "description": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Description"
+     },
+     "function": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Function"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "ins_code": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ins Code"
+     },
+     "is_additive": {
+      "title": "Is Additive",
+      "type": "boolean"
+     },
+     "key": {
+      "title": "Key",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "references": {
+      "items": {
+       "additionalProperties": {
+        "type": "string"
+       },
+       "type": "object"
+      },
+      "title": "References",
+      "type": "array"
+     },
+     "references_note": {
+      "title": "References Note",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "key",
+     "name",
+     "description",
+     "is_additive",
+     "ins_code",
+     "function",
+     "aliases",
+     "references",
+     "references_note"
+    ],
+    "title": "IngredientCardOut",
+    "type": "object"
+   },
+   "IngredientItemOut": {
+    "properties": {
+     "ingredient_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ingredient Id"
+     },
+     "ingredient_name": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ingredient Name"
+     },
+     "ins_code": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ins Code"
+     },
+     "is_additive": {
+      "title": "Is Additive",
+      "type": "boolean"
+     },
+     "match_confidence": {
+      "title": "Match Confidence",
+      "type": "number"
+     },
+     "position": {
+      "title": "Position",
+      "type": "integer"
+     },
+     "raw_text": {
+      "title": "Raw Text",
+      "type": "string"
+     }
+    },
+    "required": [
+     "position",
+     "raw_text",
+     "ingredient_id",
+     "ingredient_name",
+     "is_additive",
+     "ins_code",
+     "match_confidence"
+    ],
+    "title": "IngredientItemOut",
+    "type": "object"
+   },
+   "IngredientsOut": {
+    "properties": {
+     "evidence_level": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Evidence Level"
+     },
+     "is_complete": {
+      "title": "Is Complete",
+      "type": "boolean"
+     },
+     "items": {
+      "items": {
+       "$ref": "#/components/schemas/IngredientItemOut"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "processing": {
+      "anyOf": [
+       {
+        "additionalProperties": {
+         "type": "integer"
+        },
+        "type": "object"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Processing"
+     },
+     "processing_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Processing Reason"
+     }
+    },
+    "required": [
+     "is_complete",
+     "items",
+     "processing",
+     "processing_reason",
+     "evidence_level"
+    ],
+    "title": "IngredientsOut",
+    "type": "object"
+   },
+   "LabInformationOut": {
+    "properties": {
+     "message": {
+      "title": "Message",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "none",
+       "verified"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "required": [
+     "status",
+     "message"
+    ],
+    "title": "LabInformationOut",
+    "type": "object"
+   },
+   "LabelVersionOut": {
+    "properties": {
+     "evidence_level": {
+      "title": "Evidence Level",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "observed_at",
+     "evidence_level"
+    ],
+    "title": "LabelVersionOut",
+    "type": "object"
+   },
+   "MethodologyOut": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "status": {
+      "title": "Status",
+      "type": "string"
+     },
+     "version": {
+      "title": "Version",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "version",
+     "status"
+    ],
+    "title": "MethodologyOut",
+    "type": "object"
+   },
+   "NutrientValueOut": {
+    "properties": {
+     "nutrient": {
+      "title": "Nutrient",
+      "type": "string"
+     },
+     "unit": {
+      "title": "Unit",
+      "type": "string"
+     },
+     "value": {
+      "title": "Value",
+      "type": "number"
+     }
+    },
+    "required": [
+     "nutrient",
+     "value",
+     "unit"
+    ],
+    "title": "NutrientValueOut",
+    "type": "object"
+   },
+   "NutritionOut": {
+    "properties": {
+     "basis": {
+      "title": "Basis",
+      "type": "string"
+     },
+     "declared_basis": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Declared Basis"
+     },
+     "evidence_level": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Evidence Level"
+     },
+     "indicators": {
+      "items": {
+       "$ref": "#/components/schemas/IndicatorOut"
+      },
+      "title": "Indicators",
+      "type": "array"
+     },
+     "per_100": {
+      "items": {
+       "$ref": "#/components/schemas/NutrientValueOut"
+      },
+      "title": "Per 100",
+      "type": "array"
+     },
+     "per_serving": {
+      "items": {
+       "$ref": "#/components/schemas/NutrientValueOut"
+      },
+      "title": "Per Serving",
+      "type": "array"
+     },
+     "serving": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/ServingOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "thresholds_are_placeholder": {
+      "title": "Thresholds Are Placeholder",
+      "type": "boolean"
+     },
+     "warnings": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+     }
+    },
+    "required": [
+     "declared_basis",
+     "basis",
+     "per_100",
+     "per_serving",
+     "serving",
+     "indicators",
+     "thresholds_are_placeholder",
+     "warnings",
+     "evidence_level"
+    ],
+    "title": "NutritionOut",
+    "type": "object"
+   },
+   "Page_CategoryNodeOut_": {
+    "properties": {
+     "items": {
+      "items": {
+       "$ref": "#/components/schemas/CategoryNodeOut"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "next_cursor": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Next Cursor"
+     }
+    },
+    "required": [
+     "items",
+     "next_cursor"
+    ],
+    "title": "Page[CategoryNodeOut]",
+    "type": "object"
+   },
+   "Page_ProductSummaryOut_": {
+    "properties": {
+     "items": {
+      "items": {
+       "$ref": "#/components/schemas/ProductSummaryOut"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "next_cursor": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Next Cursor"
+     }
+    },
+    "required": [
+     "items",
+     "next_cursor"
+    ],
+    "title": "Page[ProductSummaryOut]",
+    "type": "object"
+   },
+   "PhotoIn": {
+    "properties": {
+     "content_type": {
+      "enum": [
+       "image/jpeg",
+       "image/png",
+       "image/webp"
+      ],
+      "title": "Content Type",
+      "type": "string"
+     },
+     "kind": {
+      "enum": [
+       "front",
+       "back",
+       "ingredients",
+       "nutrition",
+       "barcode",
+       "other"
+      ],
+      "title": "Kind",
+      "type": "string"
+     },
+     "size_bytes": {
+      "exclusiveMinimum": 0.0,
+      "title": "Size Bytes",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "kind",
+     "content_type",
+     "size_bytes"
+    ],
+    "title": "PhotoIn",
+    "type": "object"
+   },
+   "PhotoOut": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "kind": {
+      "title": "Kind",
+      "type": "string"
+     },
+     "state": {
+      "title": "State",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "kind",
+     "state"
+    ],
+    "title": "PhotoOut",
+    "type": "object"
+   },
+   "PhotoUploadOut": {
+    "properties": {
+     "expires_at": {
+      "format": "date-time",
+      "title": "Expires At",
+      "type": "string"
+     },
+     "photo_id": {
+      "title": "Photo Id",
+      "type": "string"
+     },
+     "upload_headers": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "title": "Upload Headers",
+      "type": "object"
+     },
+     "upload_method": {
+      "default": "PUT",
+      "title": "Upload Method",
+      "type": "string"
+     },
+     "upload_url": {
+      "title": "Upload Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "photo_id",
+     "upload_url",
+     "upload_headers",
+     "expires_at"
+    ],
+    "title": "PhotoUploadOut",
+    "type": "object"
+   },
+   "ProductDetailOut": {
+    "properties": {
+     "allergens": {
+      "items": {
+       "$ref": "#/components/schemas/AllergenDeclarationOut"
+      },
+      "title": "Allergens",
+      "type": "array"
+     },
+     "analysis_summary": {
+      "$ref": "#/components/schemas/AnalysisSummaryOut"
+     },
+     "dietary_declarations": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Dietary Declarations",
+      "type": "array"
+     },
+     "ingredients": {
+      "$ref": "#/components/schemas/IngredientsOut"
+     },
+     "lab_information": {
+      "$ref": "#/components/schemas/LabInformationOut"
+     },
+     "limitations": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+     },
+     "nutrition": {
+      "$ref": "#/components/schemas/NutritionOut"
+     },
+     "product": {
+      "$ref": "#/components/schemas/ProductOut"
+     },
+     "sponsored": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Sponsored",
+      "type": "array"
+     }
+    },
+    "required": [
+     "product",
+     "analysis_summary",
+     "nutrition",
+     "ingredients",
+     "allergens",
+     "dietary_declarations",
+     "lab_information",
+     "limitations"
+    ],
+    "title": "ProductDetailOut",
+    "type": "object"
+   },
+   "ProductLookupOut": {
+    "properties": {
+     "analysis_summary": {
+      "$ref": "#/components/schemas/AnalysisSummaryOut"
+     },
+     "product": {
+      "$ref": "#/components/schemas/ProductOut"
+     },
+     "sponsored": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Sponsored",
+      "type": "array"
+     }
+    },
+    "required": [
+     "product",
+     "analysis_summary"
+    ],
+    "title": "ProductLookupOut",
+    "type": "object"
+   },
+   "ProductOut": {
+    "properties": {
+     "badges": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Badges",
+      "type": "array"
+     },
+     "brand": {
+      "$ref": "#/components/schemas/BrandOut"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/CategoryOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "completeness": {
+      "$ref": "#/components/schemas/CompletenessOut"
+     },
+     "data_freshness": {
+      "enum": [
+       "fresh",
+       "stale",
+       "unknown"
+      ],
+      "title": "Data Freshness",
+      "type": "string"
+     },
+     "gtin14": {
+      "title": "Gtin14",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "images": {
+      "items": {
+       "$ref": "#/components/schemas/ImageOut"
+      },
+      "title": "Images",
+      "type": "array"
+     },
+     "label_version": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/LabelVersionOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "original_code": {
+      "title": "Original Code",
+      "type": "string"
+     },
+     "variant": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/VariantOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "required": [
+     "id",
+     "gtin14",
+     "original_code",
+     "name",
+     "brand",
+     "variant",
+     "category",
+     "images",
+     "label_version",
+     "data_freshness",
+     "completeness",
+     "badges"
+    ],
+    "title": "ProductOut",
+    "type": "object"
+   },
+   "ProductSummaryOut": {
+    "properties": {
+     "analysis_status": {
+      "title": "Analysis Status",
+      "type": "string"
+     },
+     "brand": {
+      "$ref": "#/components/schemas/BrandOut"
+     },
+     "category": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/CategoryOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "data_freshness": {
+      "title": "Data Freshness",
+      "type": "string"
+     },
+     "gtin14": {
+      "title": "Gtin14",
+      "type": "string"
+     },
+     "headline_indicators": {
+      "items": {
+       "$ref": "#/components/schemas/HeadlineIndicatorOut"
+      },
+      "title": "Headline Indicators",
+      "type": "array"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "variant": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/VariantOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "required": [
+     "id",
+     "gtin14",
+     "name",
+     "brand",
+     "category",
+     "variant",
+     "analysis_status",
+     "data_freshness",
+     "headline_indicators"
+    ],
+    "title": "ProductSummaryOut",
+    "type": "object"
+   },
+   "ScanEventIn": {
+    "properties": {
+     "found": {
+      "title": "Found",
+      "type": "boolean"
+     },
+     "gtin14": {
+      "pattern": "^[0-9]{14}$",
+      "title": "Gtin14",
+      "type": "string"
+     },
+     "scanned_at": {
+      "format": "date-time",
+      "title": "Scanned At",
+      "type": "string"
+     }
+    },
+    "required": [
+     "gtin14",
+     "scanned_at",
+     "found"
+    ],
+    "title": "ScanEventIn",
+    "type": "object"
+   },
+   "ScanEventsIn": {
+    "properties": {
+     "events": {
+      "items": {
+       "$ref": "#/components/schemas/ScanEventIn"
+      },
+      "maxItems": 50,
+      "minItems": 1,
+      "title": "Events",
+      "type": "array"
+     }
+    },
+    "required": [
+     "events"
+    ],
+    "title": "ScanEventsIn",
+    "type": "object"
+   },
+   "ServingOut": {
+    "properties": {
+     "servings_per_pack": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Servings Per Pack"
+     },
+     "size": {
+      "title": "Size",
+      "type": "number"
+     },
+     "unit": {
+      "title": "Unit",
+      "type": "string"
+     }
+    },
+    "required": [
+     "size",
+     "unit",
+     "servings_per_pack"
+    ],
+    "title": "ServingOut",
+    "type": "object"
+   },
+   "SourceOut": {
+    "properties": {
+     "evidence_level": {
+      "title": "Evidence Level",
+      "type": "string"
+     },
+     "field_name": {
+      "title": "Field Name",
+      "type": "string"
+     },
+     "licence_code": {
+      "title": "Licence Code",
+      "type": "string"
+     },
+     "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+     },
+     "source": {
+      "title": "Source",
+      "type": "string"
+     }
+    },
+    "required": [
+     "field_name",
+     "source",
+     "licence_code",
+     "evidence_level",
+     "observed_at"
+    ],
+    "title": "SourceOut",
+    "type": "object"
+   },
+   "SourcesOut": {
+    "properties": {
+     "attributions": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Attributions",
+      "type": "array"
+     },
+     "sources": {
+      "items": {
+       "$ref": "#/components/schemas/SourceOut"
+      },
+      "title": "Sources",
+      "type": "array"
+     }
+    },
+    "required": [
+     "sources",
+     "attributions"
+    ],
+    "title": "SourcesOut",
+    "type": "object"
+   },
+   "ValidationError": {
+    "properties": {
+     "ctx": {
+      "title": "Context",
+      "type": "object"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "title": "Location",
+      "type": "array"
+     },
+     "msg": {
+      "title": "Message",
+      "type": "string"
+     },
+     "type": {
+      "title": "Error Type",
+      "type": "string"
+     }
+    },
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError",
+    "type": "object"
+   },
+   "VariantOut": {
+    "properties": {
+     "net_quantity": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Net Quantity"
+     },
+     "pack_format": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Pack Format"
+     },
+     "unit": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Unit"
+     }
+    },
+    "required": [
+     "net_quantity",
+     "unit",
+     "pack_format"
+    ],
+    "title": "VariantOut",
+    "type": "object"
+   }
+  }
+ },
+ "info": {
+  "title": "AAHAR API",
+  "version": "0.1.0"
+ },
+ "openapi": "3.1.0",
+ "paths": {
+  "/api/v1/categories": {
+   "get": {
+    "operationId": "categories_api_v1_categories_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Page_CategoryNodeOut_"
+        }
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Categories",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/contributions": {
+   "post": {
+    "operationId": "create_api_v1_contributions_post",
+    "parameters": [
+     {
+      "in": "header",
+      "name": "authorization",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ContributionIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ContributionOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Create",
+    "tags": [
+     "contributions"
+    ]
+   }
+  },
+  "/api/v1/contributions/{contribution_id}/confirm": {
+   "post": {
+    "operationId": "confirm_api_v1_contributions__contribution_id__confirm_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "contribution_id",
+      "required": true,
+      "schema": {
+       "title": "Contribution Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "header",
+      "name": "idempotency-key",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "maxLength": 200,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Idempotency-Key"
+      }
+     },
+     {
+      "in": "header",
+      "name": "authorization",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ContributionOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Confirm",
+    "tags": [
+     "contributions"
+    ]
+   }
+  },
+  "/api/v1/contributions/{contribution_id}/photos": {
+   "post": {
+    "operationId": "add_photo_api_v1_contributions__contribution_id__photos_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "contribution_id",
+      "required": true,
+      "schema": {
+       "title": "Contribution Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "header",
+      "name": "authorization",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/PhotoIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/PhotoUploadOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Add Photo",
+    "tags": [
+     "contributions"
+    ]
+   }
+  },
+  "/api/v1/contributions/{contribution_id}/photos/{photo_id}/complete": {
+   "post": {
+    "operationId": "complete_photo_api_v1_contributions__contribution_id__photos__photo_id__complete_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "contribution_id",
+      "required": true,
+      "schema": {
+       "title": "Contribution Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "path",
+      "name": "photo_id",
+      "required": true,
+      "schema": {
+       "title": "Photo Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "header",
+      "name": "authorization",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ContributionOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Complete Photo",
+    "tags": [
+     "contributions"
+    ]
+   }
+  },
+  "/api/v1/guest/register": {
+   "post": {
+    "operationId": "register_api_v1_guest_register_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/GuestRegisterIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/GuestRegisterOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Register",
+    "tags": [
+     "guest"
+    ]
+   }
+  },
+  "/api/v1/health/live": {
+   "get": {
+    "operationId": "live_api_v1_health_live_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": {
+          "type": "string"
+         },
+         "title": "Response Live Api V1 Health Live Get",
+         "type": "object"
+        }
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Live",
+    "tags": [
+     "health"
+    ]
+   }
+  },
+  "/api/v1/health/ready": {
+   "get": {
+    "operationId": "ready_api_v1_health_ready_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Ready",
+    "tags": [
+     "health"
+    ]
+   }
+  },
+  "/api/v1/ingredients/{ingredient_id}": {
+   "get": {
+    "operationId": "ingredient_api_v1_ingredients__ingredient_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "ingredient_id",
+      "required": true,
+      "schema": {
+       "title": "Ingredient Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/IngredientCardOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Ingredient",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/me/contributions": {
+   "get": {
+    "operationId": "mine_api_v1_me_contributions_get",
+    "parameters": [
+     {
+      "in": "header",
+      "name": "authorization",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "items": {
+          "$ref": "#/components/schemas/ContributionOut"
+         },
+         "title": "Response Mine Api V1 Me Contributions Get",
+         "type": "array"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Mine",
+    "tags": [
+     "contributions"
+    ]
+   }
+  },
+  "/api/v1/meta/config": {
+   "get": {
+    "description": "SPEC \u00a78.4 shape. Android caches this for 6 h.",
+    "operationId": "meta_config_api_v1_meta_config_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "title": "Response Meta Config Api V1 Meta Config Get",
+         "type": "object"
+        }
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Meta Config",
+    "tags": [
+     "meta"
+    ]
+   }
+  },
+  "/api/v1/products/by-barcode/{code}": {
+   "get": {
+    "operationId": "by_barcode_api_v1_products_by_barcode__code__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "code",
+      "required": true,
+      "schema": {
+       "maxLength": 32,
+       "title": "Code",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "symbology",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Symbology"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProductLookupOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "By Barcode",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/products/compare": {
+   "get": {
+    "operationId": "compare_api_v1_products_compare_get",
+    "parameters": [
+     {
+      "description": "2 to 4 comma-separated product IDs",
+      "in": "query",
+      "name": "ids",
+      "required": true,
+      "schema": {
+       "description": "2 to 4 comma-separated product IDs",
+       "title": "Ids",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/CompareOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Compare",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/products/{product_id}": {
+   "get": {
+    "operationId": "product_detail_api_v1_products__product_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "product_id",
+      "required": true,
+      "schema": {
+       "title": "Product Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProductDetailOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Product Detail",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/products/{product_id}/alternatives": {
+   "get": {
+    "operationId": "alternatives_api_v1_products__product_id__alternatives_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "product_id",
+      "required": true,
+      "schema": {
+       "title": "Product Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AlternativesOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Alternatives",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/products/{product_id}/analysis": {
+   "get": {
+    "operationId": "product_analysis_api_v1_products__product_id__analysis_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "product_id",
+      "required": true,
+      "schema": {
+       "title": "Product Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ProductLookupOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Product Analysis",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/products/{product_id}/analysis/explain": {
+   "get": {
+    "operationId": "explain_api_v1_products__product_id__analysis_explain_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "product_id",
+      "required": true,
+      "schema": {
+       "title": "Product Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AnalysisExplainOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Explain",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/products/{product_id}/sources": {
+   "get": {
+    "operationId": "sources_api_v1_products__product_id__sources_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "product_id",
+      "required": true,
+      "schema": {
+       "title": "Product Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SourcesOut"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Sources",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/scan-events": {
+   "post": {
+    "description": "Anonymous, batched, consent-gated on the client (SPEC \u00a710.5). Timestamps coarsened to the hour.",
+    "operationId": "scan_events_api_v1_scan_events_post",
+    "parameters": [
+     {
+      "in": "header",
+      "name": "x-app-version",
+      "required": false,
+      "schema": {
+       "default": "unknown",
+       "maxLength": 20,
+       "title": "X-App-Version",
+       "type": "string"
+      }
+     },
+     {
+      "in": "header",
+      "name": "authorization",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ScanEventsIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "202": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": {
+          "type": "integer"
+         },
+         "title": "Response Scan Events Api V1 Scan Events Post",
+         "type": "object"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Scan Events",
+    "tags": [
+     "consumer"
+    ]
+   }
+  },
+  "/api/v1/search": {
+   "get": {
+    "operationId": "search_api_v1_search_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "q",
+      "required": false,
+      "schema": {
+       "default": "",
+       "maxLength": 100,
+       "minLength": 1,
+       "title": "Q",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "category",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "maxLength": 120,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Category"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "maximum": 50,
+       "minimum": 1,
+       "title": "Limit",
+       "type": "integer"
+      }
+     },
+     {
+      "in": "query",
+      "name": "cursor",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Cursor"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Page_ProductSummaryOut_"
+        }
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Search",
+    "tags": [
+     "catalog"
+    ]
+   }
+  },
+  "/api/v1/uploads/{token}": {
+   "put": {
+    "description": "Local stand-in for an S3 presigned PUT: the token is the credential (15-min TTL, single use).",
+    "operationId": "upload_api_v1_uploads__token__put",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "token",
+      "required": true,
+      "schema": {
+       "title": "Token",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Upload",
+    "tags": [
+     "contributions"
+    ]
+   }
+  }
+ }
+}

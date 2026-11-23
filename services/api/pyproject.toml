@@ -1,0 +1,75 @@
+[project]
+name = "foodlens-api"
+version = "0.1.0"
+description = "AAHAR (FoodLens India) API"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "alembic>=1.14",
+    "python-multipart>=0.0.12",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "httpx>=0.27",
+    "hypothesis>=6.115",
+    "ruff>=0.7",
+    "mypy>=1.13",
+    "import-linter>=2.1",
+    "pytest-cov>=6.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "ASYNC", "RUF", "N", "SIM"]
+ignore = ["S101", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "N802", "ASYNC"]
+"alembic/**" = ["N999", "E402", "E501"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+testpaths = ["tests"]
+
+[tool.importlinter]
+root_packages = ["app"]
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Scoring and ranking never import billing or campaigns (trust rule T1)"
+type = "forbidden"
+source_modules = ["app.analysis", "app.alternatives"]
+forbidden_modules = ["app.billing", "app.campaigns"]
+
+[[tool.importlinter.contracts]]
+name = "Analysis engine is pure: no DB or web imports"
+type = "forbidden"
+source_modules = ["app.analysis.engine"]
+forbidden_modules = ["sqlalchemy", "fastapi", "app.core.db"]
+
+[[tool.importlinter.contracts]]
+name = "The test-only placeholder scorer is never imported by the app (SPEC §9.6)"
+type = "forbidden"
+source_modules = ["app"]
+forbidden_modules = ["tests"]

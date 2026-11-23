@@ -10,5 +10,7 @@ Pre-filled from SPEC §18; kept current by whoever is working.
 | GS1 India / FSSAI data access agreements | Product | Adapters (interface + fake only) | open |
 | Razorpay live KYC and keys | Finance | Tier 4 (test mode only until then) | open |
 | Google Play Console org account, D-U-N-S, signing key custody, health app declaration | Product | Release (Tier 5) | open |
-| Trademark/domain clearance for product name | Product | Listing, application ID | open |
+| Trademark/domain clearance for product name (now "AAHAR", ADR 0006) | Product | Listing, store name | open |
 | Android: Firebase Test Lab device matrix (SPEC §10.12) | Eng | Device matrix tests | open: no account yet |
+| Object storage: S3/MinIO adapter, ClamAV scan, image re-encode (ADR 0004) | Eng | Contribution photos in production | open: local adapter only |
+| OCR worker (Tesseract eng+hin) + admin review queue | Eng | Contributions reaching the catalog | open: Tier 2 |
