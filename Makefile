@@ -1,30 +1,52 @@
-# FoodLens India — top-level commands (SPEC §4, §16).
-# Targets for services/api and apps/web are no-ops until those trees exist, so `make lint test` stays usable.
+# AAHAR (FoodLens India) top-level commands (SPEC §4, §16).
+# apps/web targets are no-ops until that tree exists, so `make lint test` stays usable.
 ANDROID_DIR := apps/android-consumer
 GRADLE := cd $(ANDROID_DIR) && ./gradlew --console=plain
+COMPOSE := docker compose -f infra/compose/docker-compose.yml
+UV := cd services/api && uv run
 
-.PHONY: up down seed test lint openapi android-test android-debug android-unit android-lint
+.PHONY: up down seed api-dev api-seed api-test api-lint test lint openapi \
+	android-test android-debug android-unit android-lint web-test web-lint
 
+# --- stack --------------------------------------------------------------------
 up:
-	@test -f infra/compose/docker-compose.yml && docker compose -f infra/compose/docker-compose.yml up -d || echo "infra/compose not created yet"
+	$(COMPOSE) up -d --build
 
 down:
-	@test -f infra/compose/docker-compose.yml && docker compose -f infra/compose/docker-compose.yml down || true
+	$(COMPOSE) down
 
 seed:
-	@echo "seed: services/api not created yet"
+	$(COMPOSE) exec api python -m app.seed
 
-test: android-unit
-	@test -d services/api && (cd services/api && uv run pytest) || echo "services/api: not created yet"
+# Without Docker: needs a local PostgreSQL 16 and DATABASE_URL (see .env.example).
+api-dev:
+	cd services/api && uv run alembic upgrade head && uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+api-seed:
+	$(UV) python -m app.seed
+
+# --- checks -------------------------------------------------------------------
+test: android-unit api-test web-test
+
+lint: android-lint api-lint web-lint
+
+# Needs PostgreSQL; TEST_DATABASE_URL defaults to postgres@127.0.0.1:5432/foodlens_test.
+api-test:
+	$(UV) pytest -q
+
+api-lint:
+	cd services/api && uv run ruff check . && uv run ruff format --check . && uv run mypy && uv run lint-imports
+
+web-test:
 	@test -d apps/web && (cd apps/web && npm test) || echo "apps/web: not created yet"
 
-lint: android-lint
-	@test -d services/api && (cd services/api && uv run ruff check . && uv run mypy --strict app) || echo "services/api: not created yet"
+web-lint:
 	@test -d apps/web && (cd apps/web && npm run lint && npx tsc --noEmit) || echo "apps/web: not created yet"
 
 openapi:
-	@echo "openapi: services/api not created yet"
+	$(UV) python -c "import json; from app.main import app; print(json.dumps(app.openapi(), indent=1, sort_keys=True))" > ../../packages/openapi/openapi.json
 
+# --- android ------------------------------------------------------------------
 android-unit:
 	$(GRADLE) test
 

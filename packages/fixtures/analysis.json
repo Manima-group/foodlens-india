@@ -1,0 +1,1139 @@
+{
+ "description": "Analysis engine vectors (SPEC §9). Placeholder thresholds are NOT a validated methodology; is_placeholder=true everywhere.",
+ "rule_version": "nutr-ind-0.1-placeholder",
+ "required_fields": [
+  "energy_kcal",
+  "fat_g",
+  "saturated_fat_g",
+  "carbohydrate_g",
+  "sugars_g",
+  "protein_g",
+  "sodium_mg"
+ ],
+ "thresholds": [
+  {
+   "nutrient": "fat_g",
+   "basis": "per_100g",
+   "low_max": 3,
+   "high_min": 17.5,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "saturated_fat_g",
+   "basis": "per_100g",
+   "low_max": 1.5,
+   "high_min": 5,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "sugars_g",
+   "basis": "per_100g",
+   "low_max": 5,
+   "high_min": 22.5,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "sodium_mg",
+   "basis": "per_100g",
+   "low_max": 120,
+   "high_min": 600,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "fat_g",
+   "basis": "per_100ml",
+   "low_max": 1.5,
+   "high_min": 8.75,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "saturated_fat_g",
+   "basis": "per_100ml",
+   "low_max": 0.75,
+   "high_min": 2.5,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "sugars_g",
+   "basis": "per_100ml",
+   "low_max": 2.5,
+   "high_min": 11.25,
+   "is_placeholder": true
+  },
+  {
+   "nutrient": "sodium_mg",
+   "basis": "per_100ml",
+   "low_max": 120,
+   "high_min": 600,
+   "is_placeholder": true
+  }
+ ],
+ "ingredient_aliases": [
+  {
+   "ingredient": "wheat_flour",
+   "is_additive": false,
+   "aliases": [
+    [
+     "en",
+     "Latn",
+     "wheat flour"
+    ],
+    [
+     "en",
+     "Latn",
+     "atta"
+    ],
+    [
+     "hi",
+     "Deva",
+     "गेहूं का आटा"
+    ]
+   ]
+  },
+  {
+   "ingredient": "sugar",
+   "is_additive": false,
+   "aliases": [
+    [
+     "en",
+     "Latn",
+     "sugar"
+    ],
+    [
+     "hi",
+     "Deva",
+     "चीनी"
+    ],
+    [
+     "hi",
+     "Deva",
+     "शक्कर"
+    ]
+   ]
+  },
+  {
+   "ingredient": "salt",
+   "is_additive": false,
+   "aliases": [
+    [
+     "en",
+     "Latn",
+     "salt"
+    ],
+    [
+     "en",
+     "Latn",
+     "iodised salt"
+    ],
+    [
+     "hi",
+     "Deva",
+     "नमक"
+    ]
+   ]
+  },
+  {
+   "ingredient": "ins_322",
+   "is_additive": true,
+   "ins_code": "322",
+   "aliases": [
+    [
+     "en",
+     "Latn",
+     "lecithin"
+    ]
+   ]
+  }
+ ],
+ "cases": [
+  {
+   "id": "complete_solid",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [
+     "energy_implausible",
+     "macros_exceed_100"
+    ],
+    "per_100": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    },
+    "indicators": {
+     "fat_g": "high",
+     "saturated_fat_g": "high",
+     "sugars_g": "low",
+     "sodium_mg": "high"
+    },
+    "basis": "per_100g"
+   }
+  },
+  {
+   "id": "missing_sodium",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "sodium_mg"
+    ],
+    "warnings": [],
+    "absent_warnings": []
+   },
+   "note": "missing is never treated as 0"
+  },
+  {
+   "id": "salt_only",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "salt_g": 2.0
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "sodium_from_salt"
+    ],
+    "absent_warnings": [],
+    "per_100": {
+     "sodium_mg": 800
+    }
+   }
+  },
+  {
+   "id": "salt_and_sodium_agree",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 790,
+     "salt_g": 2.0
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [
+     "salt_sodium_mismatch"
+    ],
+    "per_100": {
+     "sodium_mg": 790
+    }
+   }
+  },
+  {
+   "id": "salt_sodium_mismatch",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 500,
+     "salt_g": 2.0
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "salt_sodium_mismatch"
+    ],
+    "absent_warnings": [],
+    "per_100": {
+     "sodium_mg": 500
+    }
+   },
+   "note": "declared sodium wins; >10% difference flagged"
+  },
+  {
+   "id": "kj_only",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800,
+     "energy_kj": 2142
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "energy_from_kj"
+    ],
+    "absent_warnings": [],
+    "per_100": {
+     "energy_kcal": 511.95
+    }
+   }
+  },
+  {
+   "id": "kj_and_kcal",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800,
+     "energy_kj": 2142
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [
+     "energy_from_kj"
+    ],
+    "per_100": {
+     "energy_kcal": 512
+    }
+   }
+  },
+  {
+   "id": "per_serving_only_with_size",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_serving",
+    "product_form": "solid",
+    "serving": {
+     "size": 30,
+     "unit": "g"
+    },
+    "nutrients": {
+     "energy_kcal": 153.6,
+     "fat_g": 9,
+     "saturated_fat_g": 3.6,
+     "carbohydrate_g": 15.6,
+     "sugars_g": 1.2,
+     "protein_g": 2.4,
+     "sodium_mg": 240
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "per_serving_converted"
+    ],
+    "absent_warnings": [],
+    "per_100": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    },
+    "per_serving": {
+     "energy_kcal": 153.6,
+     "fat_g": 9,
+     "saturated_fat_g": 3.6,
+     "carbohydrate_g": 15.6,
+     "sugars_g": 1.2,
+     "protein_g": 2.4,
+     "sodium_mg": 240
+    },
+    "basis": "per_100g"
+   }
+  },
+  {
+   "id": "per_serving_only_no_size",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_serving",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 153.6,
+     "fat_g": 9,
+     "saturated_fat_g": 3.6,
+     "carbohydrate_g": 15.6,
+     "sugars_g": 1.2,
+     "protein_g": 2.4,
+     "sodium_mg": 240
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "energy_kcal",
+     "fat_g",
+     "saturated_fat_g",
+     "carbohydrate_g",
+     "sugars_g",
+     "protein_g",
+     "sodium_mg"
+    ],
+    "warnings": [
+     "missing_serving_size"
+    ],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "liquid_ml",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100ml",
+    "product_form": "liquid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 46,
+     "fat_g": 0,
+     "saturated_fat_g": 0,
+     "carbohydrate_g": 11.2,
+     "sugars_g": 10.5,
+     "protein_g": 0.3,
+     "sodium_mg": 5
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [],
+    "per_100": {
+     "energy_kcal": 46,
+     "fat_g": 0,
+     "saturated_fat_g": 0,
+     "carbohydrate_g": 11.2,
+     "sugars_g": 10.5,
+     "protein_g": 0.3,
+     "sodium_mg": 5
+    },
+    "indicators": {
+     "fat_g": "low",
+     "saturated_fat_g": "low",
+     "sugars_g": "medium",
+     "sodium_mg": "low"
+    },
+    "basis": "per_100ml"
+   }
+  },
+  {
+   "id": "liquid_per_serving_ml",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_serving",
+    "product_form": "liquid",
+    "serving": {
+     "size": 200,
+     "unit": "ml"
+    },
+    "nutrients": {
+     "energy_kcal": 92,
+     "fat_g": 0,
+     "saturated_fat_g": 0,
+     "carbohydrate_g": 22.4,
+     "sugars_g": 21.0,
+     "protein_g": 0.6,
+     "sodium_mg": 10
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "per_serving_converted"
+    ],
+    "absent_warnings": [],
+    "per_100": {
+     "energy_kcal": 46,
+     "fat_g": 0,
+     "saturated_fat_g": 0,
+     "carbohydrate_g": 11.2,
+     "sugars_g": 10.5,
+     "protein_g": 0.3,
+     "sodium_mg": 5
+    },
+    "basis": "per_100ml"
+   }
+  },
+  {
+   "id": "basis_uncertain_mixed_units",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100ml",
+    "product_form": "liquid",
+    "serving": {
+     "size": 250,
+     "unit": "g"
+    },
+    "nutrients": {
+     "energy_kcal": 46,
+     "fat_g": 0,
+     "saturated_fat_g": 0,
+     "carbohydrate_g": 11.2,
+     "sugars_g": 10.5,
+     "protein_g": 0.3,
+     "sodium_mg": 5
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "basis_uncertain"
+    ],
+    "absent_warnings": [],
+    "per_serving": {}
+   },
+   "note": "never assume density"
+  },
+  {
+   "id": "implausible_energy",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 100,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "energy_implausible"
+    ],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "macros_exceed_100",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 780,
+     "fat_g": 60,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 50,
+     "sugars_g": 4,
+     "protein_g": 10,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [
+     "macros_exceed_100"
+    ],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "zero_sugar_declared",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 0,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [],
+    "per_100": {
+     "sugars_g": 0
+    },
+    "indicators": {
+     "sugars_g": "low"
+    }
+   },
+   "note": "0 declared is data, not missing"
+  },
+  {
+   "id": "missing_many",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 400,
+     "sugars_g": 20
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "fat_g",
+     "saturated_fat_g",
+     "carbohydrate_g",
+     "protein_g",
+     "sodium_mg"
+    ],
+    "warnings": [],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "empty_label",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {}
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "energy_kcal",
+     "fat_g",
+     "saturated_fat_g",
+     "carbohydrate_g",
+     "sugars_g",
+     "protein_g",
+     "sodium_mg"
+    ],
+    "warnings": [],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "unverified_community",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "community_submitted",
+    "review_state": "submitted"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "unverified_provisional",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "insufficient_beats_unverified",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8
+    }
+   },
+   "review": {
+    "evidence_level": "community_submitted",
+    "review_state": "submitted"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "sodium_mg"
+    ],
+    "warnings": [],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "community_approved",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "community_submitted",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "published_methodology_scores",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": true,
+   "expected": {
+    "analysis_status": "scored",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": []
+   },
+   "note": "only the test-only placeholder scorer produces a value"
+  },
+  {
+   "id": "insufficient_even_if_published",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": true,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "sodium_mg"
+    ],
+    "warnings": [],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "high_sugar_liquid",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100ml",
+    "product_form": "liquid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 46,
+     "fat_g": 0,
+     "saturated_fat_g": 0,
+     "carbohydrate_g": 12.7,
+     "sugars_g": 12,
+     "protein_g": 0.3,
+     "sodium_mg": 5
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [],
+    "indicators": {
+     "sugars_g": "high"
+    }
+   }
+  },
+  {
+   "id": "boundaries",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": 30,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 5,
+     "protein_g": 8,
+     "sodium_mg": 600
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "methodology_pending",
+    "missing_fields": [],
+    "warnings": [],
+    "absent_warnings": [],
+    "indicators": {
+     "sugars_g": "low",
+     "sodium_mg": "medium"
+    }
+   },
+   "note": "low if <= low_max; high only if > high_min"
+  },
+  {
+   "id": "negative_value_rejected",
+   "kind": "nutrition",
+   "label": {
+    "basis": "per_100g",
+    "product_form": "solid",
+    "serving": null,
+    "nutrients": {
+     "energy_kcal": 512,
+     "fat_g": -1,
+     "saturated_fat_g": 12,
+     "carbohydrate_g": 52,
+     "sugars_g": 4,
+     "protein_g": 8,
+     "sodium_mg": 800
+    }
+   },
+   "review": {
+    "evidence_level": "reviewer_verified",
+    "review_state": "approved"
+   },
+   "methodology_published": false,
+   "expected": {
+    "analysis_status": "insufficient_data",
+    "missing_fields": [
+     "fat_g"
+    ],
+    "warnings": [
+     "invalid_value:fat_g"
+    ],
+    "absent_warnings": []
+   }
+  },
+  {
+   "id": "hindi_only_ingredients",
+   "kind": "ingredients",
+   "ingredients": {
+    "is_complete": true,
+    "items": [
+     "गेहूं का आटा",
+     "चीनी",
+     "नमक"
+    ]
+   },
+   "expected": {
+    "processing": {
+     "ingredient_count": 3,
+     "additive_count": 0
+    },
+    "matched": [
+     "wheat_flour",
+     "sugar",
+     "salt"
+    ]
+   }
+  },
+  {
+   "id": "unmatched_ingredient",
+   "kind": "ingredients",
+   "ingredients": {
+    "is_complete": true,
+    "items": [
+     "Wheat flour",
+     "Mystery spice blend"
+    ]
+   },
+   "expected": {
+    "processing": null,
+    "reason": "unmatched_ingredients",
+    "matched": [
+     "wheat_flour",
+     null
+    ]
+   }
+  },
+  {
+   "id": "additive_by_ins_code",
+   "kind": "ingredients",
+   "ingredients": {
+    "is_complete": true,
+    "items": [
+     "Wheat Flour",
+     "Sugar",
+     "Emulsifier (INS 322)"
+    ]
+   },
+   "expected": {
+    "processing": {
+     "ingredient_count": 3,
+     "additive_count": 1
+    },
+    "matched": [
+     "wheat_flour",
+     "sugar",
+     "ins_322"
+    ]
+   }
+  },
+  {
+   "id": "ingredient_list_incomplete",
+   "kind": "ingredients",
+   "ingredients": {
+    "is_complete": false,
+    "items": [
+     "Sugar"
+    ]
+   },
+   "expected": {
+    "processing": null,
+    "reason": "ingredients_incomplete",
+    "matched": [
+     "sugar"
+    ]
+   }
+  },
+  {
+   "id": "allergen_declarations_only",
+   "kind": "allergens",
+   "declarations": [
+    {
+     "allergen": "milk",
+     "kind": "contains",
+     "source": "label_declared",
+     "evidence_level": "reviewer_verified"
+    },
+    {
+     "allergen": "peanut",
+     "kind": "may_contain",
+     "source": "label_declared",
+     "evidence_level": "reviewer_verified"
+    }
+   ],
+   "user_prefs": [
+    "peanut",
+    "soy"
+   ],
+   "expected": {
+    "matches": [
+     {
+      "allergen": "peanut",
+      "kind": "may_contain",
+      "source": "label_declared",
+      "evidence_level": "reviewer_verified"
+     }
+    ]
+   },
+   "note": "soy not declared: no match and no claim it is absent"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+# Local stack (SPEC §16). Tier 1 needs only postgres + api; redis/minio/mailpit/clamav/worker/web
+# arrive with the tiers that use them (docs/REPORT.md).
+name: aahar
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-devonly}
+      POSTGRES_DB: foodlens
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 3s
+      retries: 20
+  api:
+    build:
+      context: ../..
+      dockerfile: infra/docker/api.Dockerfile
+    environment:
+      APP_ENV: development
+      DATABASE_URL: postgresql+asyncpg://postgres:${POSTGRES_PASSWORD:-devonly}@postgres:5432/foodlens
+      # Upload URLs handed to the phone. With `adb reverse tcp:8000 tcp:8000` the phone uses localhost.
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:8000}
+      UPLOAD_DIR: /srv/api/var/uploads
+    ports: ["8000:8000"]
+    depends_on:
+      postgres: {condition: service_healthy}
+    volumes: [uploads:/srv/api/var/uploads]
+volumes:
+  pgdata: {}
+  uploads: {}
