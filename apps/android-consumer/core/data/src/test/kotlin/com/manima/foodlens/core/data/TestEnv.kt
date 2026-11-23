@@ -49,6 +49,7 @@ class TestEnv(scope: CoroutineScope) {
     )
     val scheduler: WorkScheduler = mockk(relaxed = true)
     var now = 1_000L
+    var lastLocalId: String? = null
     val clock = Clock { now }
 
     fun enqueue(fixture: String, code: Int = 200, headers: Map<String, String> = emptyMap()) {

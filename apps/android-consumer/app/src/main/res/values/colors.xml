@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+    <!-- ADR 0006 brand colours. -->
+    <color name="aahar_orange">#F97316</color>
+    <color name="aahar_white">#FFFFFF</color>
+    <color name="aahar_grey">#6B7280</color>
+    <color name="aahar_background">#FFFFFF</color>
+</resources>

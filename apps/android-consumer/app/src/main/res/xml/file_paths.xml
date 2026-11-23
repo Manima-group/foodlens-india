@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Camera captures for contributions only; processed copies live in filesDir and are never shared. -->
+<paths>
+    <cache-path name="capture" path="capture/" />
+</paths>

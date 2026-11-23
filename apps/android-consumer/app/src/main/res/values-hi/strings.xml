@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home_enter_barcode">बारकोड दर्ज करें</string>
+    <!-- Hindi drafts: need native-speaker review before release (RISK_REGISTER R2). -->
+    <string name="tagline">जानिए आप क्या खाते हैं।</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_search">खोजें</string>
+    <string name="nav_library">मेरे उत्पाद</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="home_scan_title">बारकोड स्कैन करें</string>
+    <string name="home_scan_body">सामग्री, पोषण और घोषित एलर्जेन देखें</string>
+    <string name="home_enter_barcode">बारकोड लिखें</string>
+    <string name="home_search">खोजें</string>
+    <string name="home_recent">हाल के स्कैन</string>
+    <string name="home_recent_empty">आप जो उत्पाद स्कैन करते हैं वे यहाँ दिखते हैं, ऑफ़लाइन भी।</string>
+    <string name="home_see_all">सभी देखें</string>
+    <string name="home_product">उत्पाद</string>
+    <string name="home_not_found">अभी AAHAR में नहीं है</string>
+    <string name="home_favorites">पसंदीदा (%1$d)</string>
+    <string name="home_offline">आप ऑफ़लाइन हैं। सहेजे गए उत्पाद और स्कैनिंग अब भी काम करते हैं।</string>
+    <string name="home_maintenance">AAHAR का रखरखाव चल रहा है। सहेजे गए उत्पाद अब भी काम करते हैं।</string>
+    <string name="home_server_unreachable">अभी AAHAR सर्वर तक नहीं पहुँच पा रहे।</string>
+    <string name="retry_short">फिर कोशिश करें</string>
+    <plurals name="home_pending_contributions">
+        <item quantity="one">%1$d सबमिशन अपलोड की प्रतीक्षा में है।</item>
+        <item quantity="other">%1$d सबमिशन अपलोड की प्रतीक्षा में हैं।</item>
+    </plurals>
+    <string name="home_view">देखें</string>
+    <string name="home_trust_title">कोई पेड रैंकिंग नहीं। कोई अनुमानित स्कोर नहीं।</string>
+    <string name="home_trust_body">AAHAR दिखाता है कि हर लेबल पर क्या घोषित है और हर तथ्य कहाँ से आया। विशेषज्ञ-समीक्षित पद्धति प्रकाशित होने तक कुल स्कोर बंद रहेंगे।</string>
+    <string name="update_title">अपडेट ज़रूरी है</string>
+    <string name="update_body">AAHAR का यह संस्करण अब समर्थित नहीं है। ऐप का उपयोग जारी रखने के लिए कृपया अपडेट करें।</string>
+    <string name="update_action">अपडेट करें</string>
 </resources>
