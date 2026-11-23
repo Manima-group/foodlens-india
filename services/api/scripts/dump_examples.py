@@ -1,4 +1,6 @@
-"""Writes real API responses (seeded DB) to packages/fixtures/api-examples/live/ for the Android contract test.
+"""Writes real API responses (seeded DB) to packages/fixtures/api-examples/live/.
+
+The Android contract test (LiveContractTest) decodes these strictly.
 
     DATABASE_URL=... uv run python -m scripts.dump_examples
 """
@@ -26,8 +28,11 @@ async def main() -> None:
         auth = {"Authorization": f"Bearer {guest['guest_token']}"}
         contribution = (await c.post("/contributions", headers=auth, json={"gtin14": "4006381333931"})).json()
         photo = (
-            await c.post(f"/contributions/{contribution['id']}/photos", headers=auth,
-                         json={"kind": "front", "content_type": "image/jpeg", "size_bytes": 1000})
+            await c.post(
+                f"/contributions/{contribution['id']}/photos",
+                headers=auth,
+                json={"kind": "front", "content_type": "image/jpeg", "size_bytes": 1000},
+            )
         ).json()
         responses = {
             "by-barcode.json": demo,
@@ -46,7 +51,8 @@ async def main() -> None:
             "not-found.json": (await c.get("/products/by-barcode/4006381333931")).json(),
             "ambiguous.json": (await c.get("/products/by-barcode/01234565")).json(),
         }
-        ing = next(i["ingredient_id"] for i in responses["product-detail.json"]["ingredients"]["items"] if i["ingredient_id"])
+        items = responses["product-detail.json"]["ingredients"]["items"]
+        ing = next(i["ingredient_id"] for i in items if i["ingredient_id"])
         responses["ingredient.json"] = (await c.get(f"/ingredients/{ing}")).json()
     for name, body in responses.items():
         (OUT / name).write_text(json.dumps(body, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
