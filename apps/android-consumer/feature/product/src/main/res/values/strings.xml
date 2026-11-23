@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="product_title">Product</string>
+    <string name="product_loading">Looking up this product…</string>
+    <string name="product_refresh">Refresh</string>
+    <string name="product_favorite">Add to favourites</string>
+    <string name="product_unfavorite">Remove from favourites</string>
+    <string name="product_image">Photo of %1$s</string>
+    <string name="product_brand_verified">%1$s · Verified brand</string>
+    <string name="product_gtin">Barcode (GTIN): %1$s</string>
+    <string name="product_label_observed">Label information observed on %1$s</string>
+    <string name="freshness_fresh">Label data is current</string>
+    <string name="freshness_stale">Label data may be out of date</string>
+    <string name="freshness_unknown">Label data age is unknown</string>
+    <string name="product_missing_fields">Missing from the label data: %1$s</string>
+    <string name="product_not_found_title">We don\'t have this product yet</string>
+    <string name="product_not_found_body">Help others by adding it. Take a few photos of the pack and we\'ll review them.</string>
+    <string name="product_not_found_body_closed">This product isn\'t in AAHAR yet.</string>
+    <string name="product_add">Add this product</string>
+    <string name="product_scan_another">Scan another product</string>
+    <string name="product_queued_title">Saved for later</string>
+    <string name="product_queued_body">You\'re offline. We saved barcode %1$s and will look it up when you\'re back online. It will appear in Recent scans.</string>
+    <string name="product_updated_at">Saved on this phone: %1$s</string>
+    <string name="product_trust_footer">AAHAR explains what the label declares. It is not medical advice, and brands cannot pay to change what is shown here.</string>
+
+    <string name="section_nutrition">Nutrition facts</string>
+    <string name="nutrition_not_available">Nutrition information is not available for this product.</string>
+    <string name="nutrition_per_100g">Per 100 g</string>
+    <string name="nutrition_per_100ml">Per 100 ml</string>
+    <string name="nutrition_per_serving">Per serving</string>
+    <string name="nutrition_serving">Serving size: %1$s</string>
+    <string name="nutrition_serving_pack">Serving size: %1$s · %2$s servings per pack</string>
+    <string name="nutrition_indicators">Key nutrients (per 100 g/ml)</string>
+
+    <string name="section_ingredients">Ingredients</string>
+    <string name="ingredients_not_available">The ingredient list is not available.</string>
+    <string name="ingredients_incomplete">This ingredient list may be incomplete.</string>
+    <string name="ingredient_unmatched">Not yet in our ingredient guide</string>
+    <plurals name="ingredients_count">
+        <item quantity="one">%1$d ingredient</item>
+        <item quantity="other">%1$d ingredients</item>
+    </plurals>
+    <plurals name="additives_count">
+        <item quantity="one">%1$d additive</item>
+        <item quantity="other">%1$d additives</item>
+    </plurals>
+    <string name="ingredients_processing_unavailable">Processing information needs a complete, fully matched ingredient list.</string>
+
+    <string name="section_allergens">Allergens and dietary marks</string>
+    <string name="allergen_contains">Declared on label: contains %1$s</string>
+    <string name="allergen_may_contain">Declared on label: may contain %1$s</string>
+    <string name="allergen_highlighted">You asked to highlight this allergen.</string>
+    <string name="allergens_none_declared">No allergens are declared on the label.</string>
+    <string name="allergens_disclaimer">This is what the label declares. It is not a guarantee. Always read the pack if you have an allergy.</string>
+    <string name="dietary_declared">Declared on label: %1$s</string>
+    <string name="dietary_veg_mark">vegetarian mark (green dot)</string>
+    <string name="dietary_non_veg_mark">non-vegetarian mark (brown dot)</string>
+
+    <string name="section_lab">Laboratory information</string>
+
+    <string name="section_alternatives">Alternatives</string>
+    <string name="alternatives_loading">Finding comparable products…</string>
+    <string name="alternatives_insufficient">Not enough data on this product to suggest alternatives.</string>
+    <string name="alternatives_none">No comparable products found yet.</string>
+    <string name="alternatives_compare">Compare</string>
+    <string name="alternatives_how">How are alternatives chosen?</string>
+
+    <string name="sources_button">Sources and attribution</string>
+    <string name="report_problem">Report a problem with this product</string>
+    <string name="sources_title">Sources</string>
+    <string name="sources_intro">Where each piece of information on this product came from.</string>
+    <string name="sources_source">Source: %1$s (licence %2$s)</string>
+    <string name="sources_field">%1$s · observed %2$s</string>
+    <string name="sources_attribution">Attribution</string>
+
+    <string name="ingredient_title">Ingredient</string>
+    <string name="ingredient_additive">Additive</string>
+    <string name="ingredient_aliases">Also known as</string>
+    <string name="ingredient_references">References</string>
+</resources>

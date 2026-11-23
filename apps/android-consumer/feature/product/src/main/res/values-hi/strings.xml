@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hindi drafts: need native-speaker review before release (RISK_REGISTER R2). -->
+    <string name="product_title">उत्पाद</string>
+    <string name="product_loading">यह उत्पाद खोजा जा रहा है…</string>
+    <string name="product_refresh">रीफ़्रेश करें</string>
+    <string name="product_favorite">पसंदीदा में जोड़ें</string>
+    <string name="product_unfavorite">पसंदीदा से हटाएँ</string>
+    <string name="product_image">%1$s की फ़ोटो</string>
+    <string name="product_brand_verified">%1$s · सत्यापित ब्रांड</string>
+    <string name="product_gtin">बारकोड (GTIN): %1$s</string>
+    <string name="product_label_observed">लेबल की जानकारी %1$s को देखी गई</string>
+    <string name="freshness_fresh">लेबल डेटा मौजूदा है</string>
+    <string name="freshness_stale">लेबल डेटा पुराना हो सकता है</string>
+    <string name="freshness_unknown">लेबल डेटा कितना पुराना है, यह ज्ञात नहीं</string>
+    <string name="product_missing_fields">लेबल डेटा में यह नहीं है: %1$s</string>
+    <string name="product_not_found_title">यह उत्पाद अभी हमारे पास नहीं है</string>
+    <string name="product_not_found_body">इसे जोड़कर दूसरों की मदद करें। पैक की कुछ फ़ोटो लें, हम उनकी समीक्षा करेंगे।</string>
+    <string name="product_not_found_body_closed">यह उत्पाद अभी AAHAR में नहीं है।</string>
+    <string name="product_add">यह उत्पाद जोड़ें</string>
+    <string name="product_scan_another">दूसरा उत्पाद स्कैन करें</string>
+    <string name="product_queued_title">बाद के लिए सहेजा गया</string>
+    <string name="product_queued_body">आप ऑफ़लाइन हैं। हमने बारकोड %1$s सहेज लिया है और ऑनलाइन होने पर इसे खोजेंगे। यह हाल के स्कैन में दिखेगा।</string>
+    <string name="product_updated_at">इस फ़ोन पर सहेजा गया: %1$s</string>
+    <string name="product_trust_footer">AAHAR बताता है कि लेबल पर क्या घोषित है। यह चिकित्सा सलाह नहीं है, और ब्रांड यहाँ दिखाई गई जानकारी बदलवाने के लिए भुगतान नहीं कर सकते।</string>
+
+    <string name="section_nutrition">पोषण तथ्य</string>
+    <string name="nutrition_not_available">इस उत्पाद की पोषण जानकारी उपलब्ध नहीं है।</string>
+    <string name="nutrition_per_100g">प्रति 100 ग्राम</string>
+    <string name="nutrition_per_100ml">प्रति 100 मि.ली.</string>
+    <string name="nutrition_per_serving">प्रति सर्विंग</string>
+    <string name="nutrition_serving">सर्विंग का आकार: %1$s</string>
+    <string name="nutrition_serving_pack">सर्विंग का आकार: %1$s · प्रति पैक %2$s सर्विंग</string>
+    <string name="nutrition_indicators">मुख्य पोषक तत्व (प्रति 100 ग्राम/मि.ली.)</string>
+
+    <string name="section_ingredients">सामग्री</string>
+    <string name="ingredients_not_available">सामग्री सूची उपलब्ध नहीं है।</string>
+    <string name="ingredients_incomplete">यह सामग्री सूची अधूरी हो सकती है।</string>
+    <string name="ingredient_unmatched">अभी हमारी सामग्री गाइड में नहीं है</string>
+    <plurals name="ingredients_count">
+        <item quantity="one">%1$d सामग्री</item>
+        <item quantity="other">%1$d सामग्रियाँ</item>
+    </plurals>
+    <plurals name="additives_count">
+        <item quantity="one">%1$d योजक</item>
+        <item quantity="other">%1$d योजक</item>
+    </plurals>
+    <string name="ingredients_processing_unavailable">प्रसंस्करण जानकारी के लिए पूरी और पूरी तरह मिलान की गई सामग्री सूची चाहिए।</string>
+
+    <string name="section_allergens">एलर्जेन और आहार चिह्न</string>
+    <string name="allergen_contains">लेबल पर घोषित: इसमें %1$s है</string>
+    <string name="allergen_may_contain">लेबल पर घोषित: इसमें %1$s हो सकता है</string>
+    <string name="allergen_highlighted">आपने इस एलर्जेन को हाइलाइट करने के लिए कहा था।</string>
+    <string name="allergens_none_declared">लेबल पर कोई एलर्जेन घोषित नहीं है।</string>
+    <string name="allergens_disclaimer">यह वही है जो लेबल पर घोषित है। यह गारंटी नहीं है। अगर आपको एलर्जी है तो हमेशा पैक पढ़ें।</string>
+    <string name="dietary_declared">लेबल पर घोषित: %1$s</string>
+    <string name="dietary_veg_mark">शाकाहारी चिह्न (हरा बिंदु)</string>
+    <string name="dietary_non_veg_mark">मांसाहारी चिह्न (भूरा बिंदु)</string>
+
+    <string name="section_lab">प्रयोगशाला जानकारी</string>
+
+    <string name="section_alternatives">विकल्प</string>
+    <string name="alternatives_loading">तुलनीय उत्पाद खोजे जा रहे हैं…</string>
+    <string name="alternatives_insufficient">विकल्प सुझाने के लिए इस उत्पाद का पर्याप्त डेटा नहीं है।</string>
+    <string name="alternatives_none">अभी कोई तुलनीय उत्पाद नहीं मिला।</string>
+    <string name="alternatives_compare">तुलना करें</string>
+    <string name="alternatives_how">विकल्प कैसे चुने जाते हैं?</string>
+
+    <string name="sources_button">स्रोत और श्रेय</string>
+    <string name="report_problem">इस उत्पाद में समस्या बताएँ</string>
+    <string name="sources_title">स्रोत</string>
+    <string name="sources_intro">इस उत्पाद की हर जानकारी कहाँ से आई।</string>
+    <string name="sources_source">स्रोत: %1$s (लाइसेंस %2$s)</string>
+    <string name="sources_field">%1$s · %2$s को देखा गया</string>
+    <string name="sources_attribution">श्रेय</string>
+
+    <string name="ingredient_title">सामग्री</string>
+    <string name="ingredient_additive">योजक</string>
+    <string name="ingredient_aliases">अन्य नाम</string>
+    <string name="ingredient_references">संदर्भ</string>
+</resources>
